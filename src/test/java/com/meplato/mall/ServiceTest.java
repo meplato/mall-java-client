@@ -1,13 +1,8 @@
 package com.meplato.mall;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import org.joda.time.DateTime;
 import org.junit.Test;
 
-import java.util.Date;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
 public class ServiceTest extends BaseTest {
 

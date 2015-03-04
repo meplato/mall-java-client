@@ -1,7 +1,6 @@
 package com.meplato.mall.mlt;
 
 import com.meplato.mall.ServiceException;
-import com.meplato.mall.mlt.*;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

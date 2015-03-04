@@ -1,13 +1,13 @@
-package com.meplato.mall.mlt;
+package com.meplato.mall.catalogs;
 
 import com.google.gson.annotations.SerializedName;
 
 /**
- * MoreLikeThisResponse is a partial listing of similar products.
+ * SearchResponse is a partial listing of catalogs.
  */
-public class MoreLikeThisResponse {
+public class SearchResponse {
     @SerializedName("items")
-    private Product[] items;
+    private Catalog[] items;
     @SerializedName("itemsPerPage")
     private long itemsPerPage;
     @SerializedName("kind")
@@ -22,22 +22,22 @@ public class MoreLikeThisResponse {
     private long totalItems;
 
     /**
-     * Create new instance of MoreLikeThisResponse.
+     * Create new instance of SearchResponse.
      */
-    public MoreLikeThisResponse() {
+    public SearchResponse() {
     }
 
     /**
-     * Items is the slice of products of this result.
+     * Items is the slice of catalogs of this result.
      */
-    public Product[] getItems() {
+    public Catalog[] getItems() {
         return this.items;
     }
 
     /**
-     * Items is the slice of products of this result.
+     * Items is the slice of catalogs of this result.
      */
-    public void setItems(Product[] items) {
+    public void setItems(Catalog[] items) {
         this.items = items;
     }
 
@@ -56,28 +56,28 @@ public class MoreLikeThisResponse {
     }
 
     /**
-     * Kind is store#products/search for this kind of response.
+     * Kind is store#catalogs,v1 for this kind of response.
      */
     public String getKind() {
         return this.kind;
     }
 
     /**
-     * Kind is store#products/search for this kind of response.
+     * Kind is store#catalogs,v1 for this kind of response.
      */
     public void setKind(String kind) {
         this.kind = kind;
     }
 
     /**
-     * NextLink returns the URL to the next slice of products (if any).
+     * NextLink returns the URL to the next slice of catalogs (if any).
      */
     public String getNextLink() {
         return this.nextLink;
     }
 
     /**
-     * NextLink returns the URL to the next slice of products (if any).
+     * NextLink returns the URL to the next slice of catalogs (if any).
      */
     public void setNextLink(String nextLink) {
         this.nextLink = nextLink;
@@ -98,28 +98,28 @@ public class MoreLikeThisResponse {
     }
 
     /**
-     * StartIndex describes the index of the first product in this resultset.
+     * StartIndex describes the index of the first catalog in this resultset.
      */
     public long getStartIndex() {
         return this.startIndex;
     }
 
     /**
-     * StartIndex describes the index of the first product in this resultset.
+     * StartIndex describes the index of the first catalog in this resultset.
      */
     public void setStartIndex(long startIndex) {
         this.startIndex = startIndex;
     }
 
     /**
-     * TotalItems describes the total number of products found.
+     * TotalItems describes the total number of catalogs found.
      */
     public long getTotalItems() {
         return this.totalItems;
     }
 
     /**
-     * TotalItems describes the total number of products found.
+     * TotalItems describes the total number of catalogs found.
      */
     public void setTotalItems(long totalItems) {
         this.totalItems = totalItems;

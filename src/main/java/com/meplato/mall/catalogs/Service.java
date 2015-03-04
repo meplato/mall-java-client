@@ -1,5 +1,5 @@
 /**
- * Package mlt implements the Meplato Mall API.
+ * Package catalogs implements the Meplato Mall API.
  *
  * @copyright 2014-2015 Meplato GmbH, Switzerland. All rights reserved.
  *
@@ -13,7 +13,7 @@
  *
  * @see <a href="https://developer.meplato.com/mall/">External documentation</a>
  */
-package com.meplato.mall.mlt;
+package com.meplato.mall.catalogs;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -92,170 +92,77 @@ public class Service {
         return null;
     }
 
-    public MoreLikeThisService moreLikeThis() {
-        return new MoreLikeThisService(this);
+    public SearchService search() {
+        return new SearchService(this);
+    }
+
+    public GetService get() {
+        return new GetService(this);
     }
 
     /**
-     * MoreLikeThisService: Find similar products.
+     * SearchService: Search for catalogs.
      */
-    public static class MoreLikeThisService {
+    public static class SearchService {
         private final Service service;
         private final Map<String, Object> params = new HashMap<String, Object>();
         private final Map<String, String> headers = new HashMap<String, String>();
-        private String view;
 
         /**
-         * Creates a new instance of MoreLikeThisService.
+         * Creates a new instance of SearchService.
          */
-        public MoreLikeThisService(Service service) {
+        public SearchService(Service service) {
             this.service = service;
-        }
-
-        /**
-         * ISO code of the currency.
-         */
-        public MoreLikeThisService currency(String currency) {
-            this.params.put("currency", currency);
-            return this;
-        }
-
-        /**
-         * eCl@ss code.
-         */
-        public MoreLikeThisService eclass(String eclass) {
-            this.params.put("eclass", eclass);
-            return this;
-        }
-
-        /**
-         * Email address of the caller.
-         */
-        public MoreLikeThisService email(String email) {
-            this.params.put("email", email);
-            return this;
-        }
-
-        /**
-         * GTIN is the global trade item number.
-         */
-        public MoreLikeThisService gtin(String gtin) {
-            this.params.put("gtin", gtin);
-            return this;
-        }
-
-        /**
-         * Manufacturer is the manufacturer name.
-         */
-        public MoreLikeThisService manufacturer(String manufacturer) {
-            this.params.put("manufacturer", manufacturer);
-            return this;
-        }
-
-        /**
-         * MPN is the manufacturer part number.
-         */
-        public MoreLikeThisService mpn(String mpn) {
-            this.params.put("mpn", mpn);
-            return this;
-        }
-
-        /**
-         * Order unit.
-         */
-        public MoreLikeThisService ou(String ou) {
-            this.params.put("ou", ou);
-            return this;
         }
 
         /**
          * Pretty instructs the API to return prettified results (default false).
          */
-        public MoreLikeThisService pretty(boolean pretty) {
+        public SearchService pretty(boolean pretty) {
             this.params.put("pretty", pretty);
             return this;
         }
 
         /**
-         * Price is the price of the product.
+         * Q defines keywords to search for in the catalog name.
          */
-        public MoreLikeThisService price(double price) {
-            this.params.put("price", price);
-            return this;
-        }
-
-        /**
-         * PriceQuantity of the product.
-         */
-        public MoreLikeThisService priceQuantity(String priceQuantity) {
-            this.params.put("priceQuantity", priceQuantity);
-            return this;
-        }
-
-        /**
-         * Q defines are full text query.
-         */
-        public MoreLikeThisService q(String q) {
+        public SearchService q(String q) {
             this.params.put("q", q);
             return this;
         }
 
         /**
-         * Skip specifies how many results to skip (default 0).
+         * Skip specifies how many catalogs to skip (default 0).
          */
-        public MoreLikeThisService skip(long skip) {
+        public SearchService skip(long skip) {
             this.params.put("skip", skip);
             return this;
         }
 
         /**
-         * SPN is the supplier part number.
+         * Sort columns, separated by a comma. Preprend with a minus sign (-) to get
+         * descending sort order.
          */
-        public MoreLikeThisService spn(String spn) {
-            this.params.put("spn", spn);
+        public SearchService sort(String sort) {
+            this.params.put("sort", sort);
             return this;
         }
 
         /**
-         * Supplier is the name of the supplier.
+         * Take defines how many catalogs to return (max 100, default 20).
          */
-        public MoreLikeThisService supplier(String supplier) {
-            this.params.put("supplier", supplier);
-            return this;
-        }
-
-        /**
-         * Take defines how many results to return (max 100, default 20).
-         */
-        public MoreLikeThisService take(long take) {
+        public SearchService take(long take) {
             this.params.put("take", take);
-            return this;
-        }
-
-        /**
-         * UNSPSC code.
-         */
-        public MoreLikeThisService unspsc(String unspsc) {
-            this.params.put("unspsc", unspsc);
-            return this;
-        }
-
-        /**
-         * View code.
-         */
-        public MoreLikeThisService view(String view) {
-            this.view = view;
             return this;
         }
 
         /**
          * Execute the operation.
          */
-        public MoreLikeThisResponse execute() throws ServiceException {
+        public SearchResponse execute() throws ServiceException {
             // Make a copy of the parameters and add the path parameters to it
             Map<String, Object> params = new HashMap<String, Object>();
             params.putAll(this.params);
-            params.put("view", this.view);
 
             // Make a copy of the header parameters and set Content-Type and UA
             Map<String, String> headers = new HashMap<String, String>();
@@ -268,10 +175,64 @@ public class Service {
                 headers.put("Authorization", authorization);
             }
 
-            String uriTemplate = service.getBaseURL() + "/{view}/mlt{?q,skip,take,spn,supplier,mpn,manufacturer,gtin,price,priceQuantity,eclass,unspsc,currency,ou,email}";
+            String uriTemplate = service.getBaseURL() + "/catalogs{?q,skip,take,sort,pretty}";
             Response response = service.getClient().execute("GET", uriTemplate, params, headers, null);
             if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
-                return response.getBodyJSON(MoreLikeThisResponse.class);
+                return response.getBodyJSON(SearchResponse.class);
+            }
+
+            throw ServiceException.fromResponse(response);
+        }
+    }
+
+    /**
+     * GetService: Get returns a single catalog.
+     */
+    public static class GetService {
+        private final Service service;
+        private final Map<String, Object> params = new HashMap<String, Object>();
+        private final Map<String, String> headers = new HashMap<String, String>();
+        private long id;
+
+        /**
+         * Creates a new instance of GetService.
+         */
+        public GetService(Service service) {
+            this.service = service;
+        }
+
+        /**
+         * ID of the catalog to retrieve.
+         */
+        public GetService id(long id) {
+            this.id = id;
+            return this;
+        }
+
+        /**
+         * Execute the operation.
+         */
+        public Catalog execute() throws ServiceException {
+            // Make a copy of the parameters and add the path parameters to it
+            Map<String, Object> params = new HashMap<String, Object>();
+            params.putAll(this.params);
+            params.put("id", this.id);
+
+            // Make a copy of the header parameters and set Content-Type and UA
+            Map<String, String> headers = new HashMap<String, String>();
+            headers.putAll(this.headers);
+            headers.put("Content-Type", "application/json");
+            headers.put("User-Agent", Service.USER_AGENT);
+
+            String authorization = service.getAuthorizationHeader();
+            if (authorization != null && !authorization.isEmpty()) {
+                headers.put("Authorization", authorization);
+            }
+
+            String uriTemplate = service.getBaseURL() + "/catalogs/{id}";
+            Response response = service.getClient().execute("GET", uriTemplate, params, headers, null);
+            if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
+                return response.getBodyJSON(Catalog.class);
             }
 
             throw ServiceException.fromResponse(response);

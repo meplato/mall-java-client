@@ -1,10 +1,8 @@
-package com.meplato.mall.products;
+package com.meplato.mall;
 
 import com.damnhandy.uri.template.UriTemplate;
 import com.google.gson.Gson;
-import com.meplato.mall.Client;
-import com.meplato.mall.Response;
-import com.meplato.mall.ServiceException;
+import com.meplato.mall.products.Service;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.*;

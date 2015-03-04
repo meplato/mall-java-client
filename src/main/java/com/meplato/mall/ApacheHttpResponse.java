@@ -1,11 +1,7 @@
-package com.meplato.mall.products;
+package com.meplato.mall;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonIOException;
-import com.google.gson.JsonSyntaxException;
-import com.meplato.mall.Response;
-import com.meplato.mall.ServiceException;
+import com.meplato.mall.products.Service;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.entity.ContentType;

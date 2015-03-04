@@ -1,12 +1,7 @@
 package com.meplato.mall;
 
-import com.meplato.mall.products.ApacheHttpClient;
 import org.junit.After;
 import org.junit.Before;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 
 /**
  * Created by oliver on 23.01.15.
@@ -16,7 +11,8 @@ public abstract class BaseTest {
 
     private Client client;
 
-    protected BaseTest() {}
+    protected BaseTest() {
+    }
 
     public Client getClient() {
         if (client == null) {
@@ -46,6 +42,14 @@ public abstract class BaseTest {
         return service;
     }
     */
+
+    public com.meplato.mall.catalogs.Service getCatalogsService() {
+        com.meplato.mall.catalogs.Service service = new com.meplato.mall.catalogs.Service(getClient());
+        service.setBaseURL(BASE_URL);
+        service.setUser(getUsernameFromEnv());
+        service.setPassword(getPasswordFromEnv());
+        return service;
+    }
 
     public com.meplato.mall.products.Service getProductsService() {
         com.meplato.mall.products.Service service = new com.meplato.mall.products.Service(getClient());
