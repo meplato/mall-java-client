@@ -1,3 +1,16 @@
+/*
+ * Copyright (c) 2015 Meplato GmbH, Switzerland.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the License
+ * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+ * or implied. See the License for the specific language governing permissions and limitations under
+ * the License.
+ */
 package com.meplato.mall;
 
 import com.damnhandy.uri.template.UriTemplate;
@@ -18,14 +31,29 @@ import java.util.Map;
  * ApacheHttpClient implements Client for org.apache.http.
  */
 public class ApacheHttpClient implements Client {
+    /** Apache HTTP client */
     private final CloseableHttpClient httpClient;
 
+    /**
+     * Instantiates a new instance of ApacheHttpClient.
+     */
     public ApacheHttpClient() {
         httpClient = HttpClients.createDefault();
     }
 
+    /**
+     * Execute runs a HTTP request/response with an API endpoint.
+     *
+     * @param method the HTTP method, e.g. POST or GET
+     * @param uriTemplate the URI template according to RFC 6570
+     * @param parameters the query string parameters
+     * @param headers the key/value pairs for the HTTP header
+     * @param body the body of the request or {@code null}
+     * @return the HTTP response encapsulated by {@link Response}.
+     * @throws ServiceException if e.g. the service is unavailable.
+     */
     @Override
-    public <T> Response execute(String method, String uriTemplate, Map<String, Object> parameters, Map<String, String> headers, Object body) throws ServiceException {
+    public Response execute(String method, String uriTemplate, Map<String, Object> parameters, Map<String, String> headers, Object body) throws ServiceException {
         // URI template parameters
         String url = UriTemplate.fromTemplate(uriTemplate).expand(parameters);
 
@@ -76,6 +104,10 @@ public class ApacheHttpClient implements Client {
         for (Map.Entry<String, String> entry : headers.entrySet()) {
             httpRequest.addHeader(entry.getKey(), entry.getValue());
         }
+        httpRequest.setHeader("Accept", "application/json");
+        httpRequest.setHeader("Accept-Charset", "utf-8");
+        httpRequest.setHeader("Content-Type", "application/json");
+        httpRequest.setHeader("User-Agent", Service.USER_AGENT);
 
         try (CloseableHttpResponse httpResponse = httpClient.execute(httpRequest)) {
             Response response = new ApacheHttpResponse(httpResponse);
