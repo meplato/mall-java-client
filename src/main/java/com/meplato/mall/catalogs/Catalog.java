@@ -26,7 +26,7 @@ import com.google.gson.annotations.SerializedName;
  */
 public class Catalog {
 	@SerializedName("catalogManaged")
-	private boolean catalogManaged;
+	private Boolean catalogManaged;
 	@SerializedName("currency")
 	private String currency;
 	@SerializedName("id")
@@ -61,14 +61,14 @@ public class Catalog {
 	/**
 	 * Indicates whether the catalog is 'catalog managed' according to SAP OCI 5.
 	 */
-	public boolean isCatalogManaged() {
+	public Boolean getCatalogManaged() {
 		return this.catalogManaged;
 	}
 
 	/**
 	 * Indicates whether the catalog is 'catalog managed' according to SAP OCI 5.
 	 */
-	public void setCatalogManaged(boolean catalogManaged) {
+	public void setCatalogManaged(Boolean catalogManaged) {
 		this.catalogManaged = catalogManaged;
 	}
 

@@ -28,9 +28,9 @@ public class RangeBucket {
 	@SerializedName("count")
 	private long count;
 	@SerializedName("from")
-	private double from;
+	private Double from;
 	@SerializedName("to")
-	private double to;
+	private Double to;
 
 	/**
 	 * Create new instance of RangeBucket.
@@ -55,28 +55,28 @@ public class RangeBucket {
 	/**
 	 * From is the starting point of the range (if any).
 	 */
-	public double getFrom() {
+	public Double getFrom() {
 		return this.from;
 	}
 
 	/**
 	 * From is the starting point of the range (if any).
 	 */
-	public void setFrom(double from) {
+	public void setFrom(Double from) {
 		this.from = from;
 	}
 
 	/**
 	 * To is the end point of the range (if any).
 	 */
-	public double getTo() {
+	public Double getTo() {
 		return this.to;
 	}
 
 	/**
 	 * To is the end point of the range (if any).
 	 */
-	public void setTo(double to) {
+	public void setTo(Double to) {
 		this.to = to;
 	}
 }
