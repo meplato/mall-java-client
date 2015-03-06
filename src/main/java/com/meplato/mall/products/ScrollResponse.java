@@ -22,44 +22,26 @@ import java.util.Map;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * SearchResponse is a partial listing of products.
+ * ScrollResponse is a partial listing of the products of a catalog.
  */
-public class SearchResponse {
-	@SerializedName("facets")
-	private SearchResponseFacets facets;
+public class ScrollResponse {
 	@SerializedName("items")
 	private Product[] items;
-	@SerializedName("itemsPerPage")
-	private long itemsPerPage;
 	@SerializedName("kind")
 	private String kind;
 	@SerializedName("nextLink")
 	private String nextLink;
+	@SerializedName("pageToken")
+	private String pageToken;
 	@SerializedName("selfLink")
 	private String selfLink;
-	@SerializedName("startIndex")
-	private long startIndex;
 	@SerializedName("totalItems")
 	private long totalItems;
 
 	/**
-	 * Create new instance of SearchResponse.
+	 * Create new instance of ScrollResponse.
 	 */
-	public SearchResponse() {
-	}
-
-	/**
-	 * Facets returns the search facets.
-	 */
-	public SearchResponseFacets getFacets() {
-		return this.facets;
-	}
-
-	/**
-	 * Facets returns the search facets.
-	 */
-	public void setFacets(SearchResponseFacets facets) {
-		this.facets = facets;
+	public ScrollResponse() {
 	}
 
 	/**
@@ -77,45 +59,49 @@ public class SearchResponse {
 	}
 
 	/**
-	 * ItemsPerPage describes the number of results per page.
-	 */
-	public long getItemsPerPage() {
-		return this.itemsPerPage;
-	}
-
-	/**
-	 * ItemsPerPage describes the number of results per page.
-	 */
-	public void setItemsPerPage(long itemsPerPage) {
-		this.itemsPerPage = itemsPerPage;
-	}
-
-	/**
-	 * Kind is store#products,v1 for this kind of response.
+	 * Kind is store#products-scroll,v1 for this kind of response.
 	 */
 	public String getKind() {
 		return this.kind;
 	}
 
 	/**
-	 * Kind is store#products,v1 for this kind of response.
+	 * Kind is store#products-scroll,v1 for this kind of response.
 	 */
 	public void setKind(String kind) {
 		this.kind = kind;
 	}
 
 	/**
-	 * NextLink returns the URL to the next slice of products (if any).
+	 * NextLink returns the URL to the get the next slice of results. Is is blank if
+	 * there is no next page.
 	 */
 	public String getNextLink() {
 		return this.nextLink;
 	}
 
 	/**
-	 * NextLink returns the URL to the next slice of products (if any).
+	 * NextLink returns the URL to the get the next slice of results. Is is blank if
+	 * there is no next page.
 	 */
 	public void setNextLink(String nextLink) {
 		this.nextLink = nextLink;
+	}
+
+	/**
+	 * PageToken is the token to use to get the next slice of results. If it is
+	 * blank, there are no more results.
+	 */
+	public String getPageToken() {
+		return this.pageToken;
+	}
+
+	/**
+	 * PageToken is the token to use to get the next slice of results. If it is
+	 * blank, there are no more results.
+	 */
+	public void setPageToken(String pageToken) {
+		this.pageToken = pageToken;
 	}
 
 	/**
@@ -130,20 +116,6 @@ public class SearchResponse {
 	 */
 	public void setSelfLink(String selfLink) {
 		this.selfLink = selfLink;
-	}
-
-	/**
-	 * StartIndex describes the index of the first product in this resultset.
-	 */
-	public long getStartIndex() {
-		return this.startIndex;
-	}
-
-	/**
-	 * StartIndex describes the index of the first product in this resultset.
-	 */
-	public void setStartIndex(long startIndex) {
-		this.startIndex = startIndex;
 	}
 
 	/**

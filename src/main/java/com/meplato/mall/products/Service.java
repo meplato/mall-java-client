@@ -173,6 +173,15 @@ public class Service {
 	}
 
 	/**
+	 * Returns the {@link ScrollService}.
+	 *
+	 * @return the {@link ScrollService}.
+	 */
+	public ScrollService scroll() {
+		return new ScrollService(this);
+	}
+
+	/**
 	 * Returns the {@link GetService}.
 	 *
 	 * @return the {@link GetService}.
@@ -183,7 +192,7 @@ public class Service {
 
 	/**
 	 * Search for products. Do not use this method for iterating through all of the
-	 * products in a catalog. 
+	 * products in a catalog. Use Scroll instead. 
 	 */
 	public static class SearchService {
 		private final Service service;
@@ -397,6 +406,74 @@ public class Service {
 			Response response = service.getClient().execute("GET", uriTemplate, params, headers, null);
 			if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
 				return response.getBodyJSON(SearchResponse.class);
+			}
+
+			throw ServiceException.fromResponse(response);
+		}
+	}
+
+	/**
+	 * Scroll is an efficient way to iterate through all products of a catalog. 
+	 */
+	public static class ScrollService {
+		private final Service service;
+		private final Map<String, Object> params = new HashMap<String, Object>();
+		private final Map<String, String> headers = new HashMap<String, String>();
+		private int catalogId;
+
+		/**
+		 * Creates a new instance of ScrollService.
+		 */
+		public ScrollService(Service service) {
+			this.service = service;
+		}
+
+		/**
+		 * Identifier of the catalog to get products from.
+		 */
+		public ScrollService catalogId(int catalogId) {
+			this.catalogId = catalogId;
+			return this;
+		}
+
+		/**
+		 * PageToken for this scroll process.
+		 */
+		public ScrollService pageToken(String pageToken) {
+			this.params.put("pageToken", pageToken);
+			return this;
+		}
+
+		/**
+		 * Pretty instructs the API to return prettified results (default false).
+		 */
+		public ScrollService pretty(boolean pretty) {
+			this.params.put("pretty", pretty);
+			return this;
+		}
+
+		/**
+		 * Execute the operation.
+		 */
+		public ScrollResponse execute() throws ServiceException {
+			// Make a copy of the parameters and add the path parameters to it
+			Map<String, Object> params = new HashMap<String, Object>();
+			params.putAll(this.params);
+			params.put("catalogId", this.catalogId);
+
+			// Make a copy of the header parameters and set common headers, like the UA
+			Map<String, String> headers = new HashMap<String, String>();
+			headers.putAll(this.headers);
+
+			String authorization = service.getAuthorizationHeader();
+			if (authorization != null && !authorization.isEmpty()) {
+				headers.put("Authorization", authorization);
+			}
+
+			String uriTemplate = service.getBaseURL() + "/catalogs/{catalogId}/products/scroll{?pageToken,pretty}";
+			Response response = service.getClient().execute("GET", uriTemplate, params, headers, null);
+			if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
+				return response.getBodyJSON(ScrollResponse.class);
 			}
 
 			throw ServiceException.fromResponse(response);

@@ -129,14 +129,14 @@ public class Catalog {
 	}
 
 	/**
-	 * Kind is store#catalog for a catalog entity.
+	 * Kind is store#catalog,v1 for a catalog entity.
 	 */
 	public String getKind() {
 		return this.kind;
 	}
 
 	/**
-	 * Kind is store#catalog for a catalog entity.
+	 * Kind is store#catalog,v1 for a catalog entity.
 	 */
 	public void setKind(String kind) {
 		this.kind = kind;
