@@ -26,7 +26,7 @@ import com.google.gson.annotations.SerializedName;
  */
 public class ScalePrice {
 	@SerializedName("lbound")
-	private double lbound;
+	private double lowerBound;
 	@SerializedName("price")
 	private double price;
 
@@ -39,15 +39,15 @@ public class ScalePrice {
 	/**
 	 * LBound is the lower bound when this price will become effective.
 	 */
-	public double getLbound() {
-		return this.lbound;
+	public double getLowerBound() {
+		return this.lowerBound;
 	}
 
 	/**
 	 * LBound is the lower bound when this price will become effective.
 	 */
-	public void setLbound(double lbound) {
-		this.lbound = lbound;
+	public void setLowerBound(double lowerBound) {
+		this.lowerBound = lowerBound;
 	}
 
 	/**

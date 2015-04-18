@@ -27,6 +27,8 @@ import com.google.gson.annotations.SerializedName;
 public class Catalog {
 	@SerializedName("catalogManaged")
 	private Boolean catalogManaged;
+	@SerializedName("created")
+	private Date created;
 	@SerializedName("currency")
 	private String currency;
 	@SerializedName("id")
@@ -43,10 +45,14 @@ public class Catalog {
 	private Date lastSyncAt;
 	@SerializedName("selfLink")
 	private String selfLink;
+	@SerializedName("skipWorkArea")
+	private boolean skipWorkArea;
 	@SerializedName("syncVersion")
 	private long syncVersion;
 	@SerializedName("title")
 	private String title;
+	@SerializedName("updated")
+	private Date updated;
 	@SerializedName("validFrom")
 	private String validFrom;
 	@SerializedName("validUntil")
@@ -70,6 +76,20 @@ public class Catalog {
 	 */
 	public void setCatalogManaged(Boolean catalogManaged) {
 		this.catalogManaged = catalogManaged;
+	}
+
+	/**
+	 * Created is the creation date and time of the catalog.
+	 */
+	public Date getCreated() {
+		return this.created;
+	}
+
+	/**
+	 * Created is the creation date and time of the catalog.
+	 */
+	public void setCreated(Date created) {
+		this.created = created;
 	}
 
 	/**
@@ -129,14 +149,14 @@ public class Catalog {
 	}
 
 	/**
-	 * Kind is store#catalog,v1 for a catalog entity.
+	 * Kind is mall#catalog,v1 for a catalog entity.
 	 */
 	public String getKind() {
 		return this.kind;
 	}
 
 	/**
-	 * Kind is store#catalog,v1 for a catalog entity.
+	 * Kind is mall#catalog,v1 for a catalog entity.
 	 */
 	public void setKind(String kind) {
 		this.kind = kind;
@@ -185,6 +205,22 @@ public class Catalog {
 	}
 
 	/**
+	 * SkipWorkArea indicates whether this catalog will skip the staging area in
+	 * Mall.
+	 */
+	public boolean isSkipWorkArea() {
+		return this.skipWorkArea;
+	}
+
+	/**
+	 * SkipWorkArea indicates whether this catalog will skip the staging area in
+	 * Mall.
+	 */
+	public void setSkipWorkArea(boolean skipWorkArea) {
+		this.skipWorkArea = skipWorkArea;
+	}
+
+	/**
 	 * Current synchronization version.
 	 */
 	public long getSyncVersion() {
@@ -210,6 +246,20 @@ public class Catalog {
 	 */
 	public void setTitle(String title) {
 		this.title = title;
+	}
+
+	/**
+	 * Updated is the last modification date and time of the catalog.
+	 */
+	public Date getUpdated() {
+		return this.updated;
+	}
+
+	/**
+	 * Updated is the last modification date and time of the catalog.
+	 */
+	public void setUpdated(Date updated) {
+		this.updated = updated;
 	}
 
 	/**

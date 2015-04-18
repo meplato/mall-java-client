@@ -11,16 +11,17 @@ repositories {
 }
 
 dependencies {
-	compile 'org.apache.httpcomponents:httpclient:4.4'
-	compile 'com.google.code.gson:gson:2.3.1'
-	compile 'commons-codec:commons-codec:1.10'
-	compile 'com.damnhandy:handy-uri-templates:2.0.2'
+  compile 'org.apache.httpcomponents:httpclient:4.4'
+  compile 'commons-io:commons-io:2.4'
+  compile 'com.google.code.gson:gson:2.3.1'
+  compile 'commons-codec:commons-codec:1.10'
+  compile 'com.damnhandy:handy-uri-templates:2.0.2'
   compile 'joda-time:joda-time:2.7'
-	testCompile 'junit:junit:4.12'
+  testCompile 'junit:junit:4.12'
 }
 
 sourceCompatibility = 1.7
-version = '0.1'
+version = '1.0.beta1'
 jar {
   manifest {
     attributes 'Implementation-Title': 'Meplato Mall 1.0 API',

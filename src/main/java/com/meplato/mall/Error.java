@@ -22,7 +22,9 @@ import java.util.List;
  * that returns error information from the server.
  */
 public class Error {
-    /** Error object. */
+    /**
+     * Error object.
+     */
     @SerializedName("error")
     private final ErrorInner error;
 
@@ -48,20 +50,26 @@ public class Error {
      * Encapsulates error details.
      */
     public static class ErrorInner {
-        /** Error code, a numeric value (optional). */
+        /**
+         * Error code, a numeric value (optional).
+         */
         @SerializedName("code")
         private final int code;
-        /** Error message. */
+        /**
+         * Error message.
+         */
         @SerializedName("message")
         private final String message;
-        /** A list of information that has error details (optional). */
+        /**
+         * A list of information that has error details (optional).
+         */
         @SerializedName("details")
         private final List<String> details;
 
         /**
          * Initialize the new error details.
          *
-         * @param code the (optional) error code.
+         * @param code    the (optional) error code.
          * @param message the error message.
          * @param details the (optional) error details.
          */

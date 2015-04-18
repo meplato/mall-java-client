@@ -25,8 +25,8 @@ import com.google.gson.annotations.SerializedName;
  * SearchResponse is a partial listing of products.
  */
 public class SearchResponse {
-	@SerializedName("facets")
-	private SearchResponseFacets facets;
+	@SerializedName("aggs")
+	private SearchResponseAggs aggs;
 	@SerializedName("items")
 	private Product[] items;
 	@SerializedName("itemsPerPage")
@@ -49,17 +49,17 @@ public class SearchResponse {
 	}
 
 	/**
-	 * Facets returns the search facets.
+	 * Aggs returns the search facets.
 	 */
-	public SearchResponseFacets getFacets() {
-		return this.facets;
+	public SearchResponseAggs getAggs() {
+		return this.aggs;
 	}
 
 	/**
-	 * Facets returns the search facets.
+	 * Aggs returns the search facets.
 	 */
-	public void setFacets(SearchResponseFacets facets) {
-		this.facets = facets;
+	public void setAggs(SearchResponseAggs aggs) {
+		this.aggs = aggs;
 	}
 
 	/**
@@ -91,14 +91,14 @@ public class SearchResponse {
 	}
 
 	/**
-	 * Kind is store#products,v1 for this kind of response.
+	 * Kind is mall#products,v1 for this kind of response.
 	 */
 	public String getKind() {
 		return this.kind;
 	}
 
 	/**
-	 * Kind is store#products,v1 for this kind of response.
+	 * Kind is mall#products,v1 for this kind of response.
 	 */
 	public void setKind(String kind) {
 		this.kind = kind;

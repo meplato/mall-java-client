@@ -50,6 +50,8 @@ crashlytics-build.properties
 /build
 
 # Lib specific
+.DS_Store
 *.log
 /tmp
 /spec
+

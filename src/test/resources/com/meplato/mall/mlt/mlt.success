@@ -1,0 +1,1521 @@
+HTTP/1.1 200 OK
+Cache-Control: private, no-cache
+Content-Type: application/json; charset=utf-8
+Last-Modified: Thu, 16 Apr 2015 13:12:46 GMT
+P3p: CP="ALL ADM DEV PSAo COM OUR OTRo IND ONL"
+X-Content-Type-Options: nosniff
+X-Ua-Compatible: IE=edge
+X-Xss-Protection: 1; mode=block
+Date: Thu, 16 Apr 2015 13:12:46 GMT
+Transfer-Encoding: chunked
+
+{
+  "kind": "mall#more-like-this,v1",
+  "selfLink": "http://mall.go/api/v1/default/mlt?q=Toner\u0026pretty=1",
+  "nextLink": "http://mall.go/api/v1/default/mlt?pretty=1\u0026q=Toner\u0026skip=30",
+  "totalItems": 359,
+  "startIndex": 0,
+  "itemsPerPage": 30,
+  "items": [
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010172@5",
+      "id": "51010172@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010172",
+      "name": "Toner für HP 92274A",
+      "description": "Typ:  92274A\n\n\n\nFarbe: Schwarz\n\nKapazität 3300 Seiten (basierend auf 5% Deckung auf einer A4-Seite) \n\n\n\nGeeignet für LASERJET 4L\n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764206442 ",
+      "mpn": "TON-92274A",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010172-Toner-fuer-HP-92274A-TON-92274A.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010172-Toner-fuer-HP-92274A-TON-92274A.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010172-Toner-fuer-HP-92274A-TON-92274A.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010172@5",
+      "vendorErpNumber": "AFB",
+      "price": 39.82
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010178@5",
+      "id": "51010178@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010178",
+      "name": "Remanufactured Toner für HP",
+      "description": "Remanufactured Toner für HP\n\nTyp:  C4096A\n\n\n\nFarbe: Schwarz \n\nKapazität 5000 Seiten (basierend auf 5% Deckung auf einer A4-Seite) \n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764205773 ",
+      "mpn": "TON-C4096A",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010178-Remanufactured-Toner-fuer-HP-TON-C4096A.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010178-Remanufactured-Toner-fuer-HP-TON-C4096A.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010178-Remanufactured-Toner-fuer-HP-TON-C4096A.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010178@5",
+      "vendorErpNumber": "AFB",
+      "price": 39.82
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010181@5",
+      "id": "51010181@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010181",
+      "name": "Toner für HP C4182X",
+      "description": "Remanufactured Toner für HP\n\nTyp:  C4182X\n\n\n\nFarbe: Schwarz\n\nKapazität 22000 Seiten (basierend auf 5% Deckung auf einer A4-Seite) \t\n\n\n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764206428 ",
+      "mpn": "TON-C4182X",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010181-Toner-fuer-HP-C4182X-TON-C4182X.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010181-Toner-fuer-HP-C4182X-TON-C4182X.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010181-Toner-fuer-HP-C4182X-TON-C4182X.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010181@5",
+      "vendorErpNumber": "AFB",
+      "price": 103.71
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010196@5",
+      "id": "51010196@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010196",
+      "name": "Toner für HP Q2612A",
+      "description": "Remanufactured Toner für Pelikan\n\nTyp:  Q2612A\n\n\n\nFarbe: schwarz\n\nKapazität: 2.300 Seiten (basierend auf 5% Deckung auf einer A4-Seite)\n\n\n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764205643 ",
+      "mpn": "TON-Q2612A",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010196-Toner-fuer-HP-Q2612A-TON-Q2612A.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010196-Toner-fuer-HP-Q2612A-TON-Q2612A.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010196-Toner-fuer-HP-Q2612A-TON-Q2612A.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010196@5",
+      "vendorErpNumber": "AFB",
+      "price": 37.97
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010206@5",
+      "id": "51010206@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010206",
+      "name": "Toner für Brother TN6600",
+      "description": "Remanufactured Toner für Brother\n\nType: TN6600\n\n\n\nFarbe: schwarz\n\nKapazität: 6.000 Seiten (basierend auf 5% Deckung auf einer A4-Seite)\n\n\n\n ",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764205230 ",
+      "mpn": "TON-TN6600",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010206-Toner-fuer-Brother-TN6600-TON-TN6600.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010206-Toner-fuer-Brother-TN6600-TON-TN6600.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010206-Toner-fuer-Brother-TN6600-TON-TN6600.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010206@5",
+      "vendorErpNumber": "AFB",
+      "price": 33.25
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010208@5",
+      "id": "51010208@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010208",
+      "name": "Remanufactured Toner für Brother ",
+      "description": "Typ: TN2000\n\n\n\nFarbe: Schwarz\n\nKapazität 2500 Seiten \n\n(basierend auf 5% Deckung auf einer A4-Seite) \n\nGeeignet für DCP-7010 / DCP-7010L / HL-2030 / DCP-7025 / HL-2040 / \n\nHL-2070N / MFC-7225N / FAX-2820 / MFC-7420 / FAX-2920 / MFC-7820N \n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764205278 ",
+      "mpn": "TON-TN2000",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010208-Remanufactured-Toner-fuer-Brother--TON-TN2000.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010208-Remanufactured-Toner-fuer-Brother--TON-TN2000.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010208-Remanufactured-Toner-fuer-Brother--TON-TN2000.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010208@5",
+      "vendorErpNumber": "AFB",
+      "price": 36.96
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010211@5",
+      "id": "51010211@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010211",
+      "name": "Toner für Oki B6300  17.000 Seiten",
+      "description": "\n\nToner für Oki B6300  17.000 Seiten",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764215543 ",
+      "mpn": "TON-B6300",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010211-Toner-fuer-Oki-B6300--17-000-Seiten-TON-B6300.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010211-Toner-fuer-Oki-B6300--17-000-Seiten-TON-B6300.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010211-Toner-fuer-Oki-B6300--17-000-Seiten-TON-B6300.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010211@5",
+      "vendorErpNumber": "AFB",
+      "price": 158.36
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010244@5",
+      "id": "51010244@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010244",
+      "name": "Toner für Kyocera TK340",
+      "description": "Remanufactured Toner für Kyocera\n\nType: TK340\n\n\n\nFarbe: schwarz\n\nKapazität: 12.000 Seiten (basierend auf 5% Deckung auf einer A4-Seite) \n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764218513 ",
+      "mpn": "TON-TK340",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010244-Toner-fuer-Kyocera-TK340-TON-TK340.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010244-Toner-fuer-Kyocera-TK340-TON-TK340.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010244-Toner-fuer-Kyocera-TK340-TON-TK340.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010244@5",
+      "vendorErpNumber": "AFB",
+      "price": 65.76
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010246@5",
+      "id": "51010246@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010246",
+      "name": "Toner für Kyocera TK590C",
+      "description": "Remanufactured Toner für Kyocera\n\nType: TK590C\n\n\n\nFarbe: Cyan\n\nKapazität: 5.000 Seiten (basierend auf 5% Deckung auf einer A4-Seite)\n\n\n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764217844 ",
+      "mpn": "TON-TK590C",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010246-Toner-fuer-Kyocera-TK590C-TON-TK590C.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010246-Toner-fuer-Kyocera-TK590C-TON-TK590C.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010246-Toner-fuer-Kyocera-TK590C-TON-TK590C.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010246@5",
+      "vendorErpNumber": "AFB",
+      "price": 133.34
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010248@5",
+      "id": "51010248@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010248",
+      "name": "Toner für Kyocera TK590Y",
+      "description": "Remanufactured Toner für Kyocera\n\nType: TK590Y\n\n\n\nFarbe: gelb\n\nKapazität: 5.000 Seiten (basierend auf 5% Deckung auf einer A4-Seite)\n\n\n\n\n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764217868 ",
+      "mpn": "TON-TK590Y",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010248-Toner-fuer-Kyocera-TK590Y-TON-TK590Y.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010248-Toner-fuer-Kyocera-TK590Y-TON-TK590Y.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010248-Toner-fuer-Kyocera-TK590Y-TON-TK590Y.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010248@5",
+      "vendorErpNumber": "AFB",
+      "price": 135.21
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010309@5",
+      "id": "51010309@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010309",
+      "name": "Toner für Oki 43502002",
+      "description": "Remanufactured Toner für Oki\n\nType: 43502002\n\n\n\nFarbe: schwarz\n\nKapazität : 7.000 Seiten (basierend auf 5% Deckung auf einer A4-Seite)\n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764216984 ",
+      "mpn": "TON-43502002",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010309-Toner-fuer-Oki-43502002-TON-43502002.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010309-Toner-fuer-Oki-43502002-TON-43502002.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010309-Toner-fuer-Oki-43502002-TON-43502002.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010309@5",
+      "vendorErpNumber": "AFB",
+      "price": 39.82
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010350@5",
+      "id": "51010350@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010350",
+      "name": "Toner für HP CB435A",
+      "description": "Remanufactured Toner für HP\n\nType: CB435A\n\n\n\nFarbe: Schwarz\n\nKapazität : 1.500 Seiten (basierend auf 5% Deckung auf einer A4-Seite)\n\n \n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764205650 ",
+      "mpn": "TON-CB435A",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010350-Toner-fuer-HP-CB435A-TON-CB435A.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010350-Toner-fuer-HP-CB435A-TON-CB435A.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010350-Toner-fuer-HP-CB435A-TON-CB435A.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010350@5",
+      "vendorErpNumber": "AFB",
+      "price": 66.23
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010352@5",
+      "id": "51010352@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010352",
+      "name": "Toner für HP CB540A",
+      "description": "Remanufactured Toner für Lexmark\n\nType: CB540A\n\n\n\nFarbe: schwarz\n\nKapazität : 2.200 Seiten (basierend auf 5% Deckung auf einer A4-Seite)\n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764205834 ",
+      "mpn": "TON-CB540A",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010352-Toner-fuer-HP-CB540A-TON-CB540A.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010352-Toner-fuer-HP-CB540A-TON-CB540A.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010352-Toner-fuer-HP-CB540A-TON-CB540A.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010352@5",
+      "vendorErpNumber": "AFB",
+      "price": 62.04
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010358@5",
+      "id": "51010358@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010358",
+      "name": "Toner für HP CC530A",
+      "description": "Remanufactured Toner für HP\n\nType: CC530A\n\n\n\nFarbe: schwarz\n\nKapazität: 3.500 Seiten (basierend auf 5% Deckung auf einer A4-Seite) \n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764208545 ",
+      "mpn": "TON-CC530A",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010358-Toner-fuer-HP-CC530A-TON-CC530A.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010358-Toner-fuer-HP-CC530A-TON-CC530A.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010358-Toner-fuer-HP-CC530A-TON-CC530A.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010358@5",
+      "vendorErpNumber": "AFB",
+      "price": 72.69
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010361@5",
+      "id": "51010361@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010361",
+      "name": "Toner für HP CC533A",
+      "description": "Remanufactured Toner für HP\n\nTyp: CC533A\n\n\n\nFarbe: magenta\n\nKapazität: 2.800 Seiten (basierend auf 5% Deckung auf einer A4-Seite) \n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764208569 ",
+      "mpn": "TON-CC533A",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010361-Toner-fuer-HP-CC533A-TON-CC533A.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010361-Toner-fuer-HP-CC533A-TON-CC533A.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010361-Toner-fuer-HP-CC533A-TON-CC533A.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010361@5",
+      "vendorErpNumber": "AFB",
+      "price": 70.38
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010372@5",
+      "id": "51010372@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010372",
+      "name": "Toner für HP CE278A",
+      "description": "Remanufactured Toner für HP\n\nType: CE278A\n\n\n\nFarbe: schwarz\n\nKapazität : 2.100 Seiten (basierend auf 5% Deckung auf einer A4-Seite)\n\n\n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764216458 ",
+      "mpn": "TON-CE278A",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010372-Toner-fuer-HP-CE278A-TON-CE278A.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010372-Toner-fuer-HP-CE278A-TON-CE278A.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010372-Toner-fuer-HP-CE278A-TON-CE278A.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010372@5",
+      "vendorErpNumber": "AFB",
+      "price": 58.35
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010396@5",
+      "id": "51010396@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010396",
+      "name": "Toner für Samsung CLTK4092S",
+      "description": "Remanufactured Toner für Samsung\n\nType: CLTK4092S\n\n\n\nFarbe: schwarz\n\nKapazität: 1.500 Seiten (basierend auf 5% Deckung auf einer A4-Seite)\n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764214942 ",
+      "mpn": "TON-CLTK4092S",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010396-Toner-fuer-Samsung-CLTK4092S-TON-CLTK4092S.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010396-Toner-fuer-Samsung-CLTK4092S-TON-CLTK4092S.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010396-Toner-fuer-Samsung-CLTK4092S-TON-CLTK4092S.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010396@5",
+      "vendorErpNumber": "AFB",
+      "price": 47.22
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010400@5",
+      "id": "51010400@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010400",
+      "name": "Toner für Samsung CLTY4092S",
+      "description": "Remanufactured Toner für Samsung\n\nType: CLTY4092S\n\n\n\nFarbe: Gelb\n\nKapazität: 1.000 Seiten (basierend auf 5% Deckung auf einer A4-Seite)",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764214973 ",
+      "mpn": "TON-CLTY4092S",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010400-Toner-fuer-Samsung-CLTY4092S-TON-CLTY4092S.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010400-Toner-fuer-Samsung-CLTY4092S-TON-CLTY4092S.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010400-Toner-fuer-Samsung-CLTY4092S-TON-CLTY4092S.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010400@5",
+      "vendorErpNumber": "AFB",
+      "price": 41.66
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010411@5",
+      "id": "51010411@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010411",
+      "name": "Toner für Canon FX10",
+      "description": "Remanufactured Toner für Canon\n\nTyp: FX10\n\n\n\nFarbe: Schwarz\n\nKapazität: 2.000 Seiten (basierend auf 5% Deckung auf einer A4-Seite) \n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764205490 ",
+      "mpn": "TON-FX10",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010411-Toner-fuer-Canon-FX10-TON-FX10.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010411-Toner-fuer-Canon-FX10-TON-FX10.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010411-Toner-fuer-Canon-FX10-TON-FX10.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010411@5",
+      "vendorErpNumber": "AFB",
+      "price": 39.36
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010420@5",
+      "id": "51010420@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010420",
+      "name": "Toner für Samsung MLTD1082S",
+      "description": "Remanufactured Toner für Samsung\n\nType: MLTD1082S\n\n\n\nFarbe: schwarz\n\nKapazität : 1.500 Seiten (basierend auf 5% Deckung auf einer A4-Seite)\n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764216991 ",
+      "mpn": "TON-MLTD1082S",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010420-Toner-fuer-Samsung-MLTD1082S-TON-MLTD1082S.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010420-Toner-fuer-Samsung-MLTD1082S-TON-MLTD1082S.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010420-Toner-fuer-Samsung-MLTD1082S-TON-MLTD1082S.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010420@5",
+      "vendorErpNumber": "AFB",
+      "price": 57.32
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010424@5",
+      "id": "51010424@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010424",
+      "name": "Toner für HP Q2624A",
+      "description": "Remanufactured Toner für HP\n\nType: Q2624A\n\n\n\nFarbe: schwarz\n\nKapazität: 3.000 Seiten (basierend auf 5% Deckung auf einer A4-Seite)\n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764205674 ",
+      "mpn": "TON-Q2624A",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010424-Toner-fuer-HP-Q2624A-TON-Q2624A.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010424-Toner-fuer-HP-Q2624A-TON-Q2624A.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010424-Toner-fuer-HP-Q2624A-TON-Q2624A.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010424@5",
+      "vendorErpNumber": "AFB",
+      "price": 47.22
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010422@5",
+      "id": "51010422@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010422",
+      "name": "Toner für HP Q2612AXXL",
+      "description": "Remanufactured Toner für HP\n\nType: Q2612AXXL\n\n\n\nFarbe: schwarz\n\nKapazität : 3.000 Seiten (basierend auf 5% Deckung auf einer A4-Seite)\n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764209818 ",
+      "mpn": "TON-Q2612AXXL",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010422-Toner-fuer-HP-Q2612AXXL-TON-Q2612AXXL.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010422-Toner-fuer-HP-Q2612AXXL-TON-Q2612AXXL.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010422-Toner-fuer-HP-Q2612AXXL-TON-Q2612AXXL.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010422@5",
+      "vendorErpNumber": "AFB",
+      "price": 46.22
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010444@5",
+      "id": "51010444@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010444",
+      "name": "Toner für HP Q6002A",
+      "description": "Remanufactured Toner für HP\n\nType: Q6002A\n\n\n\nFarbe: Gelb\n\nKapazität: 2.000 Seiten (basierend auf 5% Deckung auf einer A4-Seite)\n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764205988 ",
+      "mpn": "TON-Q6002A",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010444-Toner-fuer-HP-Q6002A-TON-Q6002A.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010444-Toner-fuer-HP-Q6002A-TON-Q6002A.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010444-Toner-fuer-HP-Q6002A-TON-Q6002A.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010444@5",
+      "vendorErpNumber": "AFB",
+      "price": 56.75
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010446@5",
+      "id": "51010446@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010446",
+      "name": "Toner für HP Q6470A",
+      "description": "Remanufactured Toner für HP\n\nType: Q6470A\n\n\n\nFarbe: schwarz\n\nKapazität: 6.000 Seiten (basierend auf 5% Deckung auf einer A4-Seite)\n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764206107 ",
+      "mpn": "TON-Q6470A",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010446-Toner-fuer-HP-Q6470A-TON-Q6470A.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010446-Toner-fuer-HP-Q6470A-TON-Q6470A.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010446-Toner-fuer-HP-Q6470A-TON-Q6470A.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010446@5",
+      "vendorErpNumber": "AFB",
+      "price": 86.12
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010453@5",
+      "id": "51010453@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010453",
+      "name": "Toner für HP Q7553X",
+      "description": "Remanufactured Toner für HP\n\nTyp: Q7553X\n\n\n\nFarbe: schwarz\n\nKapazität: 7.000 Seiten (basierend auf 5% Deckung auf einer A4-Seite)\n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764205766 ",
+      "mpn": "TON-Q7553X",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010453-Toner-fuer-HP-Q7553X-TON-Q7553X.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010453-Toner-fuer-HP-Q7553X-TON-Q7553X.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010453-Toner-fuer-HP-Q7553X-TON-Q7553X.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010453@5",
+      "vendorErpNumber": "AFB",
+      "price": 71.3
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010471@5",
+      "id": "51010471@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010471",
+      "name": "Toner für Brother TN135M",
+      "description": "Remanufactured Toner für Brother\n\nType: TN135M\n\n\n\nFarbe: Magenta\n\nKapazität: 4.000 Seiten (basierend auf 5% Deckung auf einer A4-Seite)\n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764208422 ",
+      "mpn": "TON-TN135M",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010471-Toner-fuer-Brother-TN135M-TON-TN135M.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010471-Toner-fuer-Brother-TN135M-TON-TN135M.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010471-Toner-fuer-Brother-TN135M-TON-TN135M.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010471@5",
+      "vendorErpNumber": "AFB",
+      "price": 48.15
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010473@5",
+      "id": "51010473@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010473",
+      "name": "Toner für Brother TN2000XXL",
+      "description": "Remanufactured Toner für Brother\n\nTyp: TN2000XXL\n\n\n\nFarbe: Schwarz\n\nKapazität: 5.700 Seiten (basierend auf 5% Deckung auf einer A4-Seite)",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764214669 ",
+      "mpn": "TON-TN2000XXL",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010473-Toner-fuer-Brother-TN2000XXL-TON-TN2000XXL.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010473-Toner-fuer-Brother-TN2000XXL-TON-TN2000XXL.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010473-Toner-fuer-Brother-TN2000XXL-TON-TN2000XXL.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010473@5",
+      "vendorErpNumber": "AFB",
+      "price": 52.79
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010475@5",
+      "id": "51010475@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010475",
+      "name": "Toner für Brother TN2010",
+      "description": "Remanufactured Toner für Brother\n\nType: TN2010\n\n\n\nFarbe: schwarz\n\nKapazität: 1.000 Seiten (basierend auf 5% Deckung auf einer A4-Seite)\n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764215536 ",
+      "mpn": "TON-TN2010",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010475-Toner-fuer-Brother-TN2010-TON-TN2010.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010475-Toner-fuer-Brother-TN2010-TON-TN2010.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010475-Toner-fuer-Brother-TN2010-TON-TN2010.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010475@5",
+      "vendorErpNumber": "AFB",
+      "price": 63.89
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010477@5",
+      "id": "51010477@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010477",
+      "name": "Toner für Brother TN2220",
+      "description": "Remanufactured Toner für Brother\n\nType: TN2220\n\n\n\nFarbe: schwarz\n\nKapazität: 2.600 Seiten (basierend auf 5% Deckung auf einer A4-Seite)",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764215482 ",
+      "mpn": "TON-TN2220",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010477-Toner-fuer-Brother-TN2220-TON-TN2220.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010477-Toner-fuer-Brother-TN2220-TON-TN2220.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010477-Toner-fuer-Brother-TN2220-TON-TN2220.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010477@5",
+      "vendorErpNumber": "AFB",
+      "price": 61.12
+    },
+    {
+      "kind": "mall#product,v1",
+      "selfLink": "http://mall.go/api/v1/default/products/51010479@5",
+      "id": "51010479@5",
+      "tenantId": 1,
+      "vendorId": 5,
+      "vendorName": "AFB Elektronik",
+      "mpcc": "afb-elektronik",
+      "mpsc": "afb-elektronik",
+      "catalogId": 5,
+      "catalogName": "Haus \u0026 Garten",
+      "spn": "51010479",
+      "name": "Toner Brother für TN230C",
+      "description": "Remanufactured Toner für Brother\n\nType: TN230C\n\n\n\nFarbe: Cyan\n\nKapazität: 1.400 Seiten (basierend auf 5% Deckung auf einer A4-Seite)\n\n\n\n\n\n",
+      "keywords": [
+        "Toner"
+      ],
+      "eclasses": [
+        {
+          "version": "5.1",
+          "code": "24200601"
+        }
+      ],
+      "currency": "EUR",
+      "priceQty": 1,
+      "ou": "PK",
+      "cuPerOu": 1,
+      "leadtime": 3,
+      "quantityMin": 1,
+      "quantityInterval": 1,
+      "taxCode": "0.190000",
+      "gtin": "4050764214683 ",
+      "mpn": "TON-TN230C",
+      "manufacturer": "Prime Printing Technologies",
+      "image": "51010479-Toner-Brother-fuer-TN230C-TON-TN230C.JPG",
+      "imageUrl": "http://store2.go/afb-elektronik/media?file=51010479-Toner-Brother-fuer-TN230C-TON-TN230C.JPG\u0026h=230\u0026w=330",
+      "thumbnailUrl": "http://store2.go/afb-elektronik/media?file=51010479-Toner-Brother-fuer-TN230C-TON-TN230C.JPG\u0026h=90\u0026w=90",
+      "hazmats": [
+        {
+          "kind": "Gefahrgut",
+          "text": "NONE"
+        }
+      ],
+      "availability": {},
+      "created": "2015-04-16T07:17:57Z",
+      "updated": "2015-04-16T07:17:57Z",
+      "extProductId": "51010479@5",
+      "vendorErpNumber": "AFB",
+      "price": 55.47
+    }
+  ]
+}

@@ -15,7 +15,7 @@ package com.meplato.mall;
 
 import com.damnhandy.uri.template.UriTemplate;
 import com.google.gson.Gson;
-import com.meplato.mall.products.Service;
+import com.google.gson.GsonBuilder;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.*;
@@ -31,8 +31,15 @@ import java.util.Map;
  * ApacheHttpClient implements Client for org.apache.http.
  */
 public class ApacheHttpClient implements Client {
-    /** Apache HTTP client */
+    /**
+     * Apache HTTP client
+     */
     private final CloseableHttpClient httpClient;
+
+    /** User Agent. */
+    public static String USER_AGENT = "meplato-api-java-version/1.0.0";
+    /** RFC3339 pattern for deserializing date/time from the API. */
+    public static String RFC3339 = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSXXX";
 
     /**
      * Instantiates a new instance of ApacheHttpClient.
@@ -41,14 +48,18 @@ public class ApacheHttpClient implements Client {
         httpClient = HttpClients.createDefault();
     }
 
+    public static Gson getSerializer() {
+        return new GsonBuilder().setDateFormat(RFC3339).create();
+    }
+
     /**
      * Execute runs a HTTP request/response with an API endpoint.
      *
-     * @param method the HTTP method, e.g. POST or GET
+     * @param method      the HTTP method, e.g. POST or GET
      * @param uriTemplate the URI template according to RFC 6570
-     * @param parameters the query string parameters
-     * @param headers the key/value pairs for the HTTP header
-     * @param body the body of the request or {@code null}
+     * @param parameters  the query string parameters
+     * @param headers     the key/value pairs for the HTTP header
+     * @param body        the body of the request or {@code null}
      * @return the HTTP response encapsulated by {@link Response}.
      * @throws ServiceException if e.g. the service is unavailable.
      */
@@ -60,7 +71,7 @@ public class ApacheHttpClient implements Client {
         // Body
         HttpEntity requestEntity = null;
         if (body != null) {
-            Gson gson = Service.getSerializer();
+            Gson gson = getSerializer();
             try {
                 requestEntity = new StringEntity(gson.toJson(body));
             } catch (UnsupportedEncodingException e) {
@@ -107,7 +118,7 @@ public class ApacheHttpClient implements Client {
         httpRequest.setHeader("Accept", "application/json");
         httpRequest.setHeader("Accept-Charset", "utf-8");
         httpRequest.setHeader("Content-Type", "application/json");
-        httpRequest.setHeader("User-Agent", Service.USER_AGENT);
+        httpRequest.setHeader("User-Agent", USER_AGENT);
 
         try (CloseableHttpResponse httpResponse = httpClient.execute(httpRequest)) {
             Response response = new ApacheHttpResponse(httpResponse);

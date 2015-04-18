@@ -17,7 +17,7 @@
  * 
  * @copyright 2014-2015 Meplato GmbH, Switzerland.
  * @author Meplato API Team <support@meplato.com>
- * @version 1.0.0.alpha1
+ * @version 1.0.0.beta1
  * @license Copyright (c) 2015 Meplato GmbH, Switzerland. All rights reserved.
  * @see <a href="https://developer.meplato.com/mall/#terms">Terms of Service</a>
  * @see <a href="https://developer.meplato.com/mall/">External documentation</a>
@@ -41,7 +41,7 @@ public class Service {
 	/** API title. */
 	public static String TITLE = "Meplato Mall API";
 	/** API version. */
-	public static String VERSION = "1.0.0.alpha1";
+	public static String VERSION = "1.0.0.beta1";
 	/** User Agent. */
 	public static String USER_AGENT = "meplato-api-java-version/1.0.0";
 	/** Default base URL of the API endpoints. */
@@ -205,6 +205,14 @@ public class Service {
 		}
 
 		/**
+		 * eCl@ss version in the major.minor format, e.g. 5.1
+		 */
+		public MoreLikeThisService eclassversion(String eclassversion) {
+			this.params.put("eclassversion", eclassversion);
+			return this;
+		}
+
+		/**
 		 * Email address of the caller.
 		 */
 		public MoreLikeThisService email(String email) {
@@ -317,6 +325,14 @@ public class Service {
 		}
 
 		/**
+		 * UNSPSC version in the major.minor format, e.g. 8.0
+		 */
+		public MoreLikeThisService unspscversion(String unspscversion) {
+			this.params.put("unspscversion", unspscversion);
+			return this;
+		}
+
+		/**
 		 * View code.
 		 */
 		public MoreLikeThisService view(String view) {
@@ -342,7 +358,7 @@ public class Service {
 				headers.put("Authorization", authorization);
 			}
 
-			String uriTemplate = service.getBaseURL() + "/{view}/mlt{?q,skip,take,spn,supplier,mpn,manufacturer,gtin,price,priceQuantity,eclass,unspsc,currency,ou,email}";
+			String uriTemplate = service.getBaseURL() + "/{view}/mlt{?q,skip,take,spn,supplier,mpn,manufacturer,gtin,price,priceQuantity,eclass,eclassversion,unspsc,unspscversion,currency,ou,email}";
 			Response response = service.getClient().execute("GET", uriTemplate, params, headers, null);
 			if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
 				return response.getBodyJSON(MoreLikeThisResponse.class);

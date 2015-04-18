@@ -1,0 +1,10 @@
+HTTP/1.1 404 Not Found
+Content-Type: application/json; charset=utf-8
+P3p: CP="ALL ADM DEV PSAo COM OUR OTRo IND ONL"
+X-Content-Type-Options: nosniff
+X-Ua-Compatible: IE=edge
+X-Xss-Protection: 1; mode=block
+Date: Thu, 16 Apr 2015 11:22:20 GMT
+Content-Length: 52
+
+{"error":{"code":404,"message":"Product not found"}}

@@ -1,0 +1,11 @@
+HTTP/1.1 401 Unauthorized
+P3p: CP="ALL ADM DEV PSAo COM OUR OTRo IND ONL"
+Www-Authenticate: Basic realm="Meplato Mall"
+X-Content-Type-Options: nosniff
+X-Ua-Compatible: IE=edge
+X-Xss-Protection: 1; mode=block
+Date: Thu, 16 Apr 2015 16:25:07 GMT
+Content-Length: 47
+Content-Type: text/plain; charset=utf-8
+
+{"error":{"code":401,"message":"Unauthorized"}}

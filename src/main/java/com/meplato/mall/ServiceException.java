@@ -17,15 +17,17 @@ package com.meplato.mall;
  * ServiceException thrown while communicating with a service.
  */
 public class ServiceException extends Throwable {
-    /** Encapsulated error object. */
+    /**
+     * Encapsulated error object.
+     */
     private final Error error;
 
     /**
      * Initializes the exception.
      *
      * @param message the error message.
-     * @param error the error object.
-     * @param ex the Throwable or {@code null}.
+     * @param error   the error object.
+     * @param ex      the Throwable or {@code null}.
      */
     public ServiceException(String message, Error error, Throwable ex) {
         super(message, ex);

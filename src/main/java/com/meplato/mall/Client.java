@@ -22,11 +22,11 @@ public interface Client {
     /**
      * Execute runs a HTTP request/response with an API endpoint.
      *
-     * @param method the HTTP method, e.g. POST or GET
+     * @param method      the HTTP method, e.g. POST or GET
      * @param uriTemplate the URI template according to RFC 6570
-     * @param parameters the query string parameters
-     * @param headers the key/value pairs for the HTTP header
-     * @param body the body of the request or {@code null}
+     * @param parameters  the query string parameters
+     * @param headers     the key/value pairs for the HTTP header
+     * @param body        the body of the request or {@code null}
      * @return the HTTP response encapsulated by {@link Response}.
      * @throws ServiceException if e.g. the service is unavailable.
      */

@@ -17,7 +17,7 @@
  * 
  * @copyright 2014-2015 Meplato GmbH, Switzerland.
  * @author Meplato API Team <support@meplato.com>
- * @version 1.0.0.alpha1
+ * @version 1.0.0.beta1
  * @license Copyright (c) 2015 Meplato GmbH, Switzerland. All rights reserved.
  * @see <a href="https://developer.meplato.com/mall/#terms">Terms of Service</a>
  * @see <a href="https://developer.meplato.com/mall/">External documentation</a>
@@ -41,7 +41,7 @@ public class Service {
 	/** API title. */
 	public static String TITLE = "Meplato Mall API";
 	/** API version. */
-	public static String VERSION = "1.0.0.alpha1";
+	public static String VERSION = "1.0.0.beta1";
 	/** User Agent. */
 	public static String USER_AGENT = "meplato-api-java-version/1.0.0";
 	/** Default base URL of the API endpoints. */
@@ -164,6 +164,15 @@ public class Service {
 	}
 
 	/**
+	 * Returns the {@link GetService}.
+	 *
+	 * @return the {@link GetService}.
+	 */
+	public GetService get() {
+		return new GetService(this);
+	}
+
+	/**
 	 * Returns the {@link SearchService}.
 	 *
 	 * @return the {@link SearchService}.
@@ -173,12 +182,55 @@ public class Service {
 	}
 
 	/**
-	 * Returns the {@link GetService}.
-	 *
-	 * @return the {@link GetService}.
+	 * Get returns a single catalog.
 	 */
-	public GetService get() {
-		return new GetService(this);
+	public static class GetService {
+		private final Service service;
+		private final Map<String, Object> params = new HashMap<String, Object>();
+		private final Map<String, String> headers = new HashMap<String, String>();
+		private long id;
+
+		/**
+		 * Creates a new instance of GetService.
+		 */
+		public GetService(Service service) {
+			this.service = service;
+		}
+
+		/**
+		 * ID of the catalog to retrieve.
+		 */
+		public GetService id(long id) {
+			this.id = id;
+			return this;
+		}
+
+		/**
+		 * Execute the operation.
+		 */
+		public Catalog execute() throws ServiceException {
+			// Make a copy of the parameters and add the path parameters to it
+			Map<String, Object> params = new HashMap<String, Object>();
+			params.putAll(this.params);
+			params.put("id", this.id);
+
+			// Make a copy of the header parameters and set common headers, like the UA
+			Map<String, String> headers = new HashMap<String, String>();
+			headers.putAll(this.headers);
+
+			String authorization = service.getAuthorizationHeader();
+			if (authorization != null && !authorization.isEmpty()) {
+				headers.put("Authorization", authorization);
+			}
+
+			String uriTemplate = service.getBaseURL() + "/catalogs/{id}";
+			Response response = service.getClient().execute("GET", uriTemplate, params, headers, null);
+			if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
+				return response.getBodyJSON(Catalog.class);
+			}
+
+			throw ServiceException.fromResponse(response);
+		}
 	}
 
 	/**
@@ -258,58 +310,6 @@ public class Service {
 			Response response = service.getClient().execute("GET", uriTemplate, params, headers, null);
 			if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
 				return response.getBodyJSON(SearchResponse.class);
-			}
-
-			throw ServiceException.fromResponse(response);
-		}
-	}
-
-	/**
-	 * Get returns a single catalog.
-	 */
-	public static class GetService {
-		private final Service service;
-		private final Map<String, Object> params = new HashMap<String, Object>();
-		private final Map<String, String> headers = new HashMap<String, String>();
-		private long id;
-
-		/**
-		 * Creates a new instance of GetService.
-		 */
-		public GetService(Service service) {
-			this.service = service;
-		}
-
-		/**
-		 * ID of the catalog to retrieve.
-		 */
-		public GetService id(long id) {
-			this.id = id;
-			return this;
-		}
-
-		/**
-		 * Execute the operation.
-		 */
-		public Catalog execute() throws ServiceException {
-			// Make a copy of the parameters and add the path parameters to it
-			Map<String, Object> params = new HashMap<String, Object>();
-			params.putAll(this.params);
-			params.put("id", this.id);
-
-			// Make a copy of the header parameters and set common headers, like the UA
-			Map<String, String> headers = new HashMap<String, String>();
-			headers.putAll(this.headers);
-
-			String authorization = service.getAuthorizationHeader();
-			if (authorization != null && !authorization.isEmpty()) {
-				headers.put("Authorization", authorization);
-			}
-
-			String uriTemplate = service.getBaseURL() + "/catalogs/{id}";
-			Response response = service.getClient().execute("GET", uriTemplate, params, headers, null);
-			if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
-				return response.getBodyJSON(Catalog.class);
 			}
 
 			throw ServiceException.fromResponse(response);

@@ -1,88 +1,74 @@
+/*
+ * Copyright (c) 2015 Meplato GmbH, Switzerland.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the License
+ * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+ * or implied. See the License for the specific language governing permissions and limitations under
+ * the License.
+ */
 package com.meplato.mall;
 
-import com.meplato.mall.products.Service;
+import org.apache.commons.io.IOUtils;
+import org.apache.http.HttpException;
 import org.junit.After;
 import org.junit.Before;
 
+import java.io.IOException;
+
 /**
- * Created by oliver on 23.01.15.
+ * Base class for all tests.
  */
 public abstract class BaseTest {
-    private static final String BASE_URL = null; // "http://mall.go/api/v1";
-    private static final String USER = null; // <your-api-key-here>
-    private static final String PASSWORD = null;
+    private static final String BASE_URL = "http://store2.go/api/v2";
 
-    private Client client;
-    private String baseURL, user, password;
+    private MockClient client;
 
     protected BaseTest() {
-        setBaseURL(BASE_URL);
-        setUser(USER);
-        setPassword(PASSWORD);
     }
 
-    protected Client getClient() {
+    public MockClient getClient() {
         if (client == null) {
-            client = new ApacheHttpClient();
+            client = new MockClient();
         }
         return client;
     }
 
-    protected String getBaseURL() {
-        if (baseURL == null) {
-            return Service.BASE_URL;
-        }
-        return baseURL;
-    }
-
-    protected void setBaseURL(String baseURL) {
-         this.baseURL= baseURL;
-    }
-
-    protected String getUser() {
-        if (user == null) {
-            return System.getenv("MALL_USER");
-        }
-        return user;
-    }
-
-    protected void setUser(String user) {
-        this.user = user;
-    }
-
-    protected String getPassword() {
-        if (password == null) {
-            return System.getenv("MALL_PASSWORD");
-        }
-        return password;
-    }
-
-    protected void setPassword(String password) {
-        this.password = password;
-    }
-
-    protected com.meplato.mall.catalogs.Service getCatalogsService() {
+    public com.meplato.mall.catalogs.Service getCatalogsService() {
         com.meplato.mall.catalogs.Service service = new com.meplato.mall.catalogs.Service(getClient());
-        service.setBaseURL(getBaseURL());
-        service.setUser(getUser());
-        service.setPassword(getPassword());
-        return service;
-    }
-
-    public com.meplato.mall.products.Service getProductsService() {
-        com.meplato.mall.products.Service service = new com.meplato.mall.products.Service(getClient());
-        service.setBaseURL(getBaseURL());
-        service.setUser(getUser());
-        service.setPassword(getPassword());
+        service.setBaseURL(BASE_URL);
         return service;
     }
 
     public com.meplato.mall.mlt.Service getMoreLikeThisService() {
         com.meplato.mall.mlt.Service service = new com.meplato.mall.mlt.Service(getClient());
-        service.setBaseURL(getBaseURL());
-        service.setUser(getUser());
-        service.setPassword(getPassword());
+        service.setBaseURL(BASE_URL);
         return service;
+    }
+
+    public com.meplato.mall.products.Service getProductsService() {
+        com.meplato.mall.products.Service service = new com.meplato.mall.products.Service(getClient());
+        service.setBaseURL(BASE_URL);
+        return service;
+    }
+
+    protected void mockResponse(Response response) {
+        this.getClient().setResponse(response);
+    }
+
+    protected Response mockResponseFromFile(String filename) throws IOException, HttpException, ServiceException {
+        String contents = IOUtils.toString(this.getClass().getResourceAsStream(filename), "UTF-8");
+        Response response = MockResponse.fromContents(contents);
+        this.mockResponse(response);
+        return response;
+    }
+
+    protected void mockResponseException(ServiceException exception) {
+        this.getClient().setServiceException(exception);
     }
 
     @Before
@@ -92,5 +78,4 @@ public abstract class BaseTest {
     @After
     public void afterTest() throws ServiceException {
     }
-
 }

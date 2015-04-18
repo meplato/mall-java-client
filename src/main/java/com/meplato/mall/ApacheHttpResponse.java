@@ -14,8 +14,8 @@
 package com.meplato.mall;
 
 import com.google.gson.Gson;
-import com.meplato.mall.products.Service;
 import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.entity.ContentType;
 import org.apache.http.util.EntityUtils;
@@ -27,13 +27,18 @@ import java.nio.charset.Charset;
  * ApacheHttpResponse implements Response for org.apache.http.
  */
 public class ApacheHttpResponse implements Response {
-    /** Status code of the HTTP response. */
+    /**
+     * Status code of the HTTP response.
+     */
     private final int statusCode;
-    /** Body of the HTTP response as a String. */
+    /**
+     * Body of the HTTP response as a String.
+     */
     private final String body;
 
     /**
-     * Instantiates a new instance of ApacheHttpResponse.
+     * Instantiates a new instance of ApacheHttpResponse,
+     * then close the response.
      *
      * @param response the HTTP response from the ApacheHttpClient.
      * @throws ServiceException if e.g. serialization of the response fails.
@@ -55,6 +60,30 @@ public class ApacheHttpResponse implements Response {
                     response.close();
                 } catch (IOException e) {
                 }
+            }
+        } else {
+            this.body = null;
+        }
+    }
+
+    /**
+     * Instantiates a new instance of ApacheHttpResponse.
+     *
+     * @param response the HTTP response from the ApacheHttpClient.
+     * @throws ServiceException if e.g. serialization of the response fails.
+     */
+    public ApacheHttpResponse(HttpResponse response) throws ServiceException {
+        this.statusCode = response.getStatusLine().getStatusCode();
+
+        HttpEntity entity = response.getEntity();
+        if (entity != null) {
+            try {
+                ContentType contentType = ContentType.getOrDefault(entity);
+                Charset charset = contentType.getCharset();
+                this.body = EntityUtils.toString(entity, charset);
+            } catch (IOException e) {
+                throw new ServiceException("Error deserializing data", null, e);
+            } finally {
             }
         } else {
             this.body = null;
@@ -85,17 +114,16 @@ public class ApacheHttpResponse implements Response {
      * Unmarshals the HTTP body as an instance of T.
      *
      * @param clazz the class.
-     * @param <T> the type of the class to deserialize.
+     * @param <T>   the type of the class to deserialize.
      * @return the deserialized object or {@code null}.
      */
     @Override
     public <T> T getBodyJSON(Class<T> clazz) {
         if (this.body != null) {
-            Gson gson = Service.getSerializer();
+            Gson gson = ApacheHttpClient.getSerializer();
             return gson.fromJson(this.body, clazz);
         } else {
             return null;
         }
-
     }
 }

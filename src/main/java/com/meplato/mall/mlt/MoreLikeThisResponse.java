@@ -75,14 +75,14 @@ public class MoreLikeThisResponse {
 	}
 
 	/**
-	 * Kind is store#products/search for this kind of response.
+	 * Kind is mall#more-like-this,v1 for this kind of response.
 	 */
 	public String getKind() {
 		return this.kind;
 	}
 
 	/**
-	 * Kind is store#products/search for this kind of response.
+	 * Kind is mall#more-like-this,v1 for this kind of response.
 	 */
 	public void setKind(String kind) {
 		this.kind = kind;

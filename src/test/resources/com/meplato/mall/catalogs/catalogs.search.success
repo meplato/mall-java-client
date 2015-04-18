@@ -1,0 +1,116 @@
+HTTP/1.1 200 OK
+Cache-Control: private, no-cache
+Content-Type: application/json; charset=utf-8
+Last-Modified: Thu, 16 Apr 2015 16:30:08 GMT
+P3p: CP="ALL ADM DEV PSAo COM OUR OTRo IND ONL"
+X-Content-Type-Options: nosniff
+X-Ua-Compatible: IE=edge
+X-Xss-Protection: 1; mode=block
+Date: Thu, 16 Apr 2015 16:30:08 GMT
+Transfer-Encoding: chunked
+
+{
+  "kind": "mall#catalogs,v1",
+  "selfLink": "http://mall.go/api/v1/catalogs?pretty=1",
+  "totalItems": 6,
+  "startIndex": 0,
+  "itemsPerPage": 30,
+  "items": [
+    {
+      "kind": "mall#catalog,v1",
+      "selfLink": "http://mall.go/api/v1/catalogs/5",
+      "id": 5,
+      "title": "Haus \u0026 Garten",
+      "language": "de",
+      "currency": "EUR",
+      "validFrom": "2015-01-01",
+      "validUntil": "2016-12-31",
+      "lastSyncAt": "2015-04-16T07:18:19Z",
+      "syncVersion": 2,
+      "skipWorkArea": true,
+      "expired": false,
+      "effective": true,
+      "created": "2015-04-16T06:29:56Z",
+      "updated": "2015-04-16T07:18:19Z"
+    },
+    {
+      "kind": "mall#catalog,v1",
+      "selfLink": "http://mall.go/api/v1/catalogs/6",
+      "id": 6,
+      "title": "Technische Produkte",
+      "language": "de",
+      "currency": "EUR",
+      "validFrom": "2015-04-16",
+      "validUntil": "2015-12-31",
+      "lastSyncAt": "2015-04-16T07:17:31Z",
+      "syncVersion": 1,
+      "skipWorkArea": true,
+      "expired": false,
+      "effective": true,
+      "created": "2015-04-16T06:30:27Z",
+      "updated": "2015-04-16T07:17:31Z"
+    },
+    {
+      "kind": "mall#catalog,v1",
+      "selfLink": "http://mall.go/api/v1/catalogs/7",
+      "id": 7,
+      "title": "Büroausstattung",
+      "language": "de",
+      "currency": "EUR",
+      "validFrom": "2015-04-16",
+      "validUntil": "2015-12-31",
+      "lastSyncAt": "2015-04-16T06:34:01Z",
+      "syncVersion": 1,
+      "skipWorkArea": true,
+      "expired": false,
+      "effective": true,
+      "created": "2015-04-16T06:31:07Z",
+      "updated": "2015-04-16T06:34:01Z"
+    },
+    {
+      "kind": "mall#catalog,v1",
+      "selfLink": "http://mall.go/api/v1/catalogs/1",
+      "id": 1,
+      "title": "IT-Bedarf",
+      "language": "de",
+      "currency": "EUR",
+      "validFrom": "",
+      "validUntil": "",
+      "skipWorkArea": true,
+      "expired": false,
+      "effective": true,
+      "created": "2015-04-16T06:26:32Z",
+      "updated": "2015-04-16T06:26:32Z"
+    },
+    {
+      "kind": "mall#catalog,v1",
+      "selfLink": "http://mall.go/api/v1/catalogs/3",
+      "id": 3,
+      "title": "Werkzeuge",
+      "language": "de",
+      "currency": "EUR",
+      "validFrom": "",
+      "validUntil": "",
+      "skipWorkArea": true,
+      "expired": false,
+      "effective": true,
+      "created": "2015-04-16T06:26:32Z",
+      "updated": "2015-04-16T06:26:32Z"
+    },
+    {
+      "kind": "mall#catalog,v1",
+      "selfLink": "http://mall.go/api/v1/catalogs/4",
+      "id": 4,
+      "title": "Elektromaterial",
+      "language": "de",
+      "currency": "EUR",
+      "validFrom": "",
+      "validUntil": "",
+      "skipWorkArea": true,
+      "expired": false,
+      "effective": true,
+      "created": "2015-04-16T06:26:32Z",
+      "updated": "2015-04-16T06:26:32Z"
+    }
+  ]
+}

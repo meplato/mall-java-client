@@ -25,61 +25,235 @@ import com.google.gson.annotations.SerializedName;
  * Product is a good or service in a catalog.
  */
 public class Product {
+	@SerializedName("availability")
+	private Availability availability;
+	@SerializedName("blobs")
+	private Blob[] blobs;
+	@SerializedName("bpn")
+	private String bpn;
+	@SerializedName("catalogId")
+	private long catalogId;
+	@SerializedName("catalogManaged")
+	private boolean catalogManaged;
+	@SerializedName("catalogName")
+	private String catalogName;
 	@SerializedName("categories")
 	private String[] categories;
-	@SerializedName("contentUnit")
+	@SerializedName("conditions")
+	private Condition[] conditions;
+	@SerializedName("created")
+	private Date created;
+	@SerializedName("cu")
 	private String contentUnit;
 	@SerializedName("cuPerOu")
 	private double cuPerOu;
 	@SerializedName("currency")
 	private String currency;
-	@SerializedName("dataSheetLink")
-	private String dataSheetLink;
+	@SerializedName("custField1")
+	private String custField1;
+	@SerializedName("custField2")
+	private String custField2;
+	@SerializedName("custField3")
+	private String custField3;
+	@SerializedName("custField4")
+	private String custField4;
+	@SerializedName("custField5")
+	private String custField5;
+	@SerializedName("custFields")
+	private CustField[] custFields;
+	@SerializedName("datasheet")
+	private String datasheet;
+	@SerializedName("datasheetURL")
+	private String datasheetURL;
 	@SerializedName("description")
 	private String description;
 	@SerializedName("eclasses")
-	private String[] eclasses;
-	@SerializedName("gtins")
-	private String[] gtins;
+	private Eclass[] eclasses;
+	@SerializedName("erpGroupSupplier")
+	private String erpGroupSupplier;
+	@SerializedName("extCategory")
+	private String extCategory;
+	@SerializedName("extCategoryId")
+	private String extCategoryId;
+	@SerializedName("extProductId")
+	private String extProductId;
+	@SerializedName("extSchemaType")
+	private String extSchemaType;
+	@SerializedName("features")
+	private Feature[] features;
+	@SerializedName("gtin")
+	private String gtin;
+	@SerializedName("hazmats")
+	private Hazmat[] hazmats;
 	@SerializedName("id")
 	private String id;
-	@SerializedName("imageLink")
-	private String imageLink;
+	@SerializedName("image")
+	private String image;
+	@SerializedName("imageURL")
+	private String imageURL;
 	@SerializedName("keywords")
 	private String[] keywords;
 	@SerializedName("kind")
 	private String kind;
+	@SerializedName("leadtime")
+	private Double leadtime;
+	@SerializedName("listPrice")
+	private Double listPrice;
+	@SerializedName("manufactcode")
+	private String manufactcode;
+	@SerializedName("manufacturer")
+	private String manufacturer;
+	@SerializedName("matgroup")
+	private String matgroup;
+	@SerializedName("meplatoPrice")
+	private Double meplatoPrice;
+	@SerializedName("mpcc")
+	private String mPCC;
 	@SerializedName("mpn")
 	private String mpn;
-	@SerializedName("orderUnit")
+	@SerializedName("mpsc")
+	private String mPSC;
+	@SerializedName("name")
+	private String name;
+	@SerializedName("ou")
 	private String orderUnit;
 	@SerializedName("price")
-	private double price;
-	@SerializedName("priceQuantity")
+	private Double price;
+	@SerializedName("priceQty")
 	private double priceQuantity;
-	@SerializedName("safetySheetLink")
-	private String safetySheetLink;
+	@SerializedName("quantityInterval")
+	private Double quantityInterval;
+	@SerializedName("quantityMax")
+	private Double quantityMax;
+	@SerializedName("quantityMin")
+	private Double quantityMin;
+	@SerializedName("references")
+	private Reference[] references;
+	@SerializedName("safetysheet")
+	private String safetysheet;
+	@SerializedName("safetysheetURL")
+	private String safetysheetURL;
 	@SerializedName("scalePrices")
 	private ScalePrice[] scalePrices;
+	@SerializedName("score")
+	private double score;
 	@SerializedName("selfLink")
 	private String selfLink;
+	@SerializedName("service")
+	private Boolean service;
 	@SerializedName("spn")
 	private String spn;
-	@SerializedName("thumbnailLink")
-	private String thumbnailLink;
-	@SerializedName("title")
-	private String title;
+	@SerializedName("taxCode")
+	private String taxCode;
+	@SerializedName("tenantId")
+	private long tenantId;
+	@SerializedName("thumbnail")
+	private String thumbnail;
+	@SerializedName("thumbnailURL")
+	private String thumbnailURL;
 	@SerializedName("unspscs")
-	private String[] unspscs;
-	@SerializedName("vendor")
-	private String vendor;
+	private Unspsc[] unspscs;
+	@SerializedName("updated")
+	private Date updated;
 	@SerializedName("vendorErpNumber")
-	private String vendorErpNumber;
+	private String vendorERPNumber;
+	@SerializedName("vendorId")
+	private long vendorId;
+	@SerializedName("vendorName")
+	private String vendorName;
 
 	/**
 	 * Create new instance of Product.
 	 */
 	public Product() {
+	}
+
+	/**
+	 * Availability allows the update of product availability data, e.g. the number
+	 * of items in stock or the date when the product will be available again. 
+	 */
+	public Availability getAvailability() {
+		return this.availability;
+	}
+
+	/**
+	 * Availability allows the update of product availability data, e.g. the number
+	 * of items in stock or the date when the product will be available again. 
+	 */
+	public void setAvailability(Availability availability) {
+		this.availability = availability;
+	}
+
+	/**
+	 * Blobs specifies external data, e.g. images or datasheets.
+	 */
+	public Blob[] getBlobs() {
+		return this.blobs;
+	}
+
+	/**
+	 * Blobs specifies external data, e.g. images or datasheets.
+	 */
+	public void setBlobs(Blob[] blobs) {
+		this.blobs = blobs;
+	}
+
+	/**
+	 * BPN is the buyer part number of the product.
+	 */
+	public String getBpn() {
+		return this.bpn;
+	}
+
+	/**
+	 * BPN is the buyer part number of the product.
+	 */
+	public void setBpn(String bpn) {
+		this.bpn = bpn;
+	}
+
+	/**
+	 * CatalogID is the identifier of the catalog.
+	 */
+	public long getCatalogId() {
+		return this.catalogId;
+	}
+
+	/**
+	 * CatalogID is the identifier of the catalog.
+	 */
+	public void setCatalogId(long catalogId) {
+		this.catalogId = catalogId;
+	}
+
+	/**
+	 * CatalogManaged is an indicator whether this product is "managed" in the sense
+	 * of the SAP OCI 5.0 specification.
+	 */
+	public boolean isCatalogManaged() {
+		return this.catalogManaged;
+	}
+
+	/**
+	 * CatalogManaged is an indicator whether this product is "managed" in the sense
+	 * of the SAP OCI 5.0 specification.
+	 */
+	public void setCatalogManaged(boolean catalogManaged) {
+		this.catalogManaged = catalogManaged;
+	}
+
+	/**
+	 * CatalogName is the name of the catalog.
+	 */
+	public String getCatalogName() {
+		return this.catalogName;
+	}
+
+	/**
+	 * CatalogName is the name of the catalog.
+	 */
+	public void setCatalogName(String catalogName) {
+		this.catalogName = catalogName;
 	}
 
 	/**
@@ -96,6 +270,34 @@ public class Product {
 	 */
 	public void setCategories(String[] categories) {
 		this.categories = categories;
+	}
+
+	/**
+	 * Conditions describes the product conditions, e.g. refurbished or used.
+	 */
+	public Condition[] getConditions() {
+		return this.conditions;
+	}
+
+	/**
+	 * Conditions describes the product conditions, e.g. refurbished or used.
+	 */
+	public void setConditions(Condition[] conditions) {
+		this.conditions = conditions;
+	}
+
+	/**
+	 * Created is the creation date and time of the product.
+	 */
+	public Date getCreated() {
+		return this.created;
+	}
+
+	/**
+	 * Created is the creation date and time of the product.
+	 */
+	public void setCreated(Date created) {
+		this.created = created;
 	}
 
 	/**
@@ -145,17 +347,129 @@ public class Product {
 	}
 
 	/**
-	 * DataSheetLink is a URL to the datasheet (if any).
+	 * CustField1 is the CUST_FIELD1 of the SAP OCI specification. It has a maximum
+	 * length of 10 characters. 
 	 */
-	public String getDataSheetLink() {
-		return this.dataSheetLink;
+	public String getCustField1() {
+		return this.custField1;
 	}
 
 	/**
-	 * DataSheetLink is a URL to the datasheet (if any).
+	 * CustField1 is the CUST_FIELD1 of the SAP OCI specification. It has a maximum
+	 * length of 10 characters. 
 	 */
-	public void setDataSheetLink(String dataSheetLink) {
-		this.dataSheetLink = dataSheetLink;
+	public void setCustField1(String custField1) {
+		this.custField1 = custField1;
+	}
+
+	/**
+	 * CustField2 is the CUST_FIELD2 of the SAP OCI specification. It has a maximum
+	 * length of 10 characters. 
+	 */
+	public String getCustField2() {
+		return this.custField2;
+	}
+
+	/**
+	 * CustField2 is the CUST_FIELD2 of the SAP OCI specification. It has a maximum
+	 * length of 10 characters. 
+	 */
+	public void setCustField2(String custField2) {
+		this.custField2 = custField2;
+	}
+
+	/**
+	 * CustField3 is the CUST_FIELD3 of the SAP OCI specification. It has a maximum
+	 * length of 10 characters. 
+	 */
+	public String getCustField3() {
+		return this.custField3;
+	}
+
+	/**
+	 * CustField3 is the CUST_FIELD3 of the SAP OCI specification. It has a maximum
+	 * length of 10 characters. 
+	 */
+	public void setCustField3(String custField3) {
+		this.custField3 = custField3;
+	}
+
+	/**
+	 * CustField4 is the CUST_FIELD4 of the SAP OCI specification. It has a maximum
+	 * length of 20 characters. 
+	 */
+	public String getCustField4() {
+		return this.custField4;
+	}
+
+	/**
+	 * CustField4 is the CUST_FIELD4 of the SAP OCI specification. It has a maximum
+	 * length of 20 characters. 
+	 */
+	public void setCustField4(String custField4) {
+		this.custField4 = custField4;
+	}
+
+	/**
+	 * CustField5 is the CUST_FIELD5 of the SAP OCI specification. It has a maximum
+	 * length of 50 characters. 
+	 */
+	public String getCustField5() {
+		return this.custField5;
+	}
+
+	/**
+	 * CustField5 is the CUST_FIELD5 of the SAP OCI specification. It has a maximum
+	 * length of 50 characters. 
+	 */
+	public void setCustField5(String custField5) {
+		this.custField5 = custField5;
+	}
+
+	/**
+	 * CustFields is an array of generic name/value pairs for customer-specific
+	 * attributes.
+	 */
+	public CustField[] getCustFields() {
+		return this.custFields;
+	}
+
+	/**
+	 * CustFields is an array of generic name/value pairs for customer-specific
+	 * attributes.
+	 */
+	public void setCustFields(CustField[] custFields) {
+		this.custFields = custFields;
+	}
+
+	/**
+	 * Datasheet is the name of an datasheet file (in the media files) or a URL to
+	 * the datasheet on the internet.
+	 */
+	public String getDatasheet() {
+		return this.datasheet;
+	}
+
+	/**
+	 * Datasheet is the name of an datasheet file (in the media files) or a URL to
+	 * the datasheet on the internet.
+	 */
+	public void setDatasheet(String datasheet) {
+		this.datasheet = datasheet;
+	}
+
+	/**
+	 * DatasheetURL is the URL to the data sheet (if available).
+	 */
+	public String getDatasheetURL() {
+		return this.datasheetURL;
+	}
+
+	/**
+	 * DatasheetURL is the URL to the data sheet (if available).
+	 */
+	public void setDatasheetURL(String datasheetURL) {
+		this.datasheetURL = datasheetURL;
 	}
 
 	/**
@@ -175,29 +489,129 @@ public class Product {
 	/**
 	 * Eclasses is a list of eCl@ss categories the product belongs to.
 	 */
-	public String[] getEclasses() {
+	public Eclass[] getEclasses() {
 		return this.eclasses;
 	}
 
 	/**
 	 * Eclasses is a list of eCl@ss categories the product belongs to.
 	 */
-	public void setEclasses(String[] eclasses) {
+	public void setEclasses(Eclass[] eclasses) {
 		this.eclasses = eclasses;
 	}
 
 	/**
-	 * GTINs is the list of GTIN part numbers.
+	 * erpGroupSupplier is the material group of the product on the
+	 * merchant-/supplier-side.
 	 */
-	public String[] getGtins() {
-		return this.gtins;
+	public String getErpGroupSupplier() {
+		return this.erpGroupSupplier;
 	}
 
 	/**
-	 * GTINs is the list of GTIN part numbers.
+	 * erpGroupSupplier is the material group of the product on the
+	 * merchant-/supplier-side.
 	 */
-	public void setGtins(String[] gtins) {
-		this.gtins = gtins;
+	public void setErpGroupSupplier(String erpGroupSupplier) {
+		this.erpGroupSupplier = erpGroupSupplier;
+	}
+
+	/**
+	 * ExtCategory is the EXT_CATEGORY field of the SAP OCI specification.
+	 */
+	public String getExtCategory() {
+		return this.extCategory;
+	}
+
+	/**
+	 * ExtCategory is the EXT_CATEGORY field of the SAP OCI specification.
+	 */
+	public void setExtCategory(String extCategory) {
+		this.extCategory = extCategory;
+	}
+
+	/**
+	 * ExtCategoryID is the EXT_CATEGORY_ID field of the SAP OCI specification.
+	 */
+	public String getExtCategoryId() {
+		return this.extCategoryId;
+	}
+
+	/**
+	 * ExtCategoryID is the EXT_CATEGORY_ID field of the SAP OCI specification.
+	 */
+	public void setExtCategoryId(String extCategoryId) {
+		this.extCategoryId = extCategoryId;
+	}
+
+	/**
+	 * ExtProductID is the EXT_PRODUCT_ID field of the SAP OCI specification.
+	 */
+	public String getExtProductId() {
+		return this.extProductId;
+	}
+
+	/**
+	 * ExtProductID is the EXT_PRODUCT_ID field of the SAP OCI specification.
+	 */
+	public void setExtProductId(String extProductId) {
+		this.extProductId = extProductId;
+	}
+
+	/**
+	 * ExtSchemaType is the EXT_SCHEMA_TYPE field of the SAP OCI specification.
+	 */
+	public String getExtSchemaType() {
+		return this.extSchemaType;
+	}
+
+	/**
+	 * ExtSchemaType is the EXT_SCHEMA_TYPE field of the SAP OCI specification.
+	 */
+	public void setExtSchemaType(String extSchemaType) {
+		this.extSchemaType = extSchemaType;
+	}
+
+	/**
+	 * Features defines product features, i.e. additional properties of the product.
+	 */
+	public Feature[] getFeatures() {
+		return this.features;
+	}
+
+	/**
+	 * Features defines product features, i.e. additional properties of the product.
+	 */
+	public void setFeatures(Feature[] features) {
+		this.features = features;
+	}
+
+	/**
+	 * GTIN is the global trade item number of the product (used to be EAN).
+	 */
+	public String getGtin() {
+		return this.gtin;
+	}
+
+	/**
+	 * GTIN is the global trade item number of the product (used to be EAN).
+	 */
+	public void setGtin(String gtin) {
+		this.gtin = gtin;
+	}
+
+	/**
+	 * Hazmats classifies hazardous/dangerous goods.
+	 */
+	public Hazmat[] getHazmats() {
+		return this.hazmats;
+	}
+
+	/**
+	 * Hazmats classifies hazardous/dangerous goods.
+	 */
+	public void setHazmats(Hazmat[] hazmats) {
+		this.hazmats = hazmats;
 	}
 
 	/**
@@ -215,17 +629,33 @@ public class Product {
 	}
 
 	/**
-	 * ImageLink is a URL to the image (if any).
+	 * Image is the name of an image file (in the media files) or a URL to the image
+	 * on the internet.
 	 */
-	public String getImageLink() {
-		return this.imageLink;
+	public String getImage() {
+		return this.image;
 	}
 
 	/**
-	 * ImageLink is a URL to the image (if any).
+	 * Image is the name of an image file (in the media files) or a URL to the image
+	 * on the internet.
 	 */
-	public void setImageLink(String imageLink) {
-		this.imageLink = imageLink;
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	/**
+	 * ImageURL is the URL to the image.
+	 */
+	public String getImageURL() {
+		return this.imageURL;
+	}
+
+	/**
+	 * ImageURL is the URL to the image.
+	 */
+	public void setImageURL(String imageURL) {
+		this.imageURL = imageURL;
 	}
 
 	/**
@@ -243,17 +673,115 @@ public class Product {
 	}
 
 	/**
-	 * Kind is store#product for a product entity.
+	 * Kind is mall#product,v1 for a product entity.
 	 */
 	public String getKind() {
 		return this.kind;
 	}
 
 	/**
-	 * Kind is store#product for a product entity.
+	 * Kind is mall#product,v1 for a product entity.
 	 */
 	public void setKind(String kind) {
 		this.kind = kind;
+	}
+
+	/**
+	 * Leadtime is the delivery time of the product in (fractional) days.
+	 */
+	public Double getLeadtime() {
+		return this.leadtime;
+	}
+
+	/**
+	 * Leadtime is the delivery time of the product in (fractional) days.
+	 */
+	public void setLeadtime(Double leadtime) {
+		this.leadtime = leadtime;
+	}
+
+	/**
+	 * ListPrice is the list price (per order unit) of the product.
+	 */
+	public Double getListPrice() {
+		return this.listPrice;
+	}
+
+	/**
+	 * ListPrice is the list price (per order unit) of the product.
+	 */
+	public void setListPrice(Double listPrice) {
+		this.listPrice = listPrice;
+	}
+
+	/**
+	 * Manufactcode is the manufacturer code as used in the SAP OCI specification.
+	 */
+	public String getManufactcode() {
+		return this.manufactcode;
+	}
+
+	/**
+	 * Manufactcode is the manufacturer code as used in the SAP OCI specification.
+	 */
+	public void setManufactcode(String manufactcode) {
+		this.manufactcode = manufactcode;
+	}
+
+	/**
+	 * Manufacturer is the name of the manufacturer.
+	 */
+	public String getManufacturer() {
+		return this.manufacturer;
+	}
+
+	/**
+	 * Manufacturer is the name of the manufacturer.
+	 */
+	public void setManufacturer(String manufacturer) {
+		this.manufacturer = manufacturer;
+	}
+
+	/**
+	 * Matgroup is the material group of the product on the buy-side.
+	 */
+	public String getMatgroup() {
+		return this.matgroup;
+	}
+
+	/**
+	 * Matgroup is the material group of the product on the buy-side.
+	 */
+	public void setMatgroup(String matgroup) {
+		this.matgroup = matgroup;
+	}
+
+	/**
+	 * MeplatoPrice is the Meplato price (per order unit) of the product.
+	 */
+	public Double getMeplatoPrice() {
+		return this.meplatoPrice;
+	}
+
+	/**
+	 * MeplatoPrice is the Meplato price (per order unit) of the product.
+	 */
+	public void setMeplatoPrice(Double meplatoPrice) {
+		this.meplatoPrice = meplatoPrice;
+	}
+
+	/**
+	 * MPCC is the Meplato Company Code of the vendor.
+	 */
+	public String getMPCC() {
+		return this.mPCC;
+	}
+
+	/**
+	 * MPCC is the Meplato Company Code of the vendor.
+	 */
+	public void setMPCC(String mPCC) {
+		this.mPCC = mPCC;
 	}
 
 	/**
@@ -268,6 +796,34 @@ public class Product {
 	 */
 	public void setMpn(String mpn) {
 		this.mpn = mpn;
+	}
+
+	/**
+	 * MPSC is the Meplato Supplier Code of the vendor.
+	 */
+	public String getMPSC() {
+		return this.mPSC;
+	}
+
+	/**
+	 * MPSC is the Meplato Supplier Code of the vendor.
+	 */
+	public void setMPSC(String mPSC) {
+		this.mPSC = mPSC;
+	}
+
+	/**
+	 * Name of the product.
+	 */
+	public String getName() {
+		return this.name;
+	}
+
+	/**
+	 * Name of the product.
+	 */
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	/**
@@ -289,14 +845,14 @@ public class Product {
 	/**
 	 * Price is the net price (per order unit) of the product for the end-user.
 	 */
-	public double getPrice() {
+	public Double getPrice() {
 		return this.price;
 	}
 
 	/**
 	 * Price is the net price (per order unit) of the product for the end-user.
 	 */
-	public void setPrice(double price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 
@@ -317,17 +873,95 @@ public class Product {
 	}
 
 	/**
-	 * SafetySheetLink is a URL to the safety datasheet (if any).
+	 * QuantityInterval is the interval in which this product can be ordered. E.g.
+	 * if the quantity interval is 5, the end-user can only order in quantities of
+	 * 5,10,15 etc. 
 	 */
-	public String getSafetySheetLink() {
-		return this.safetySheetLink;
+	public Double getQuantityInterval() {
+		return this.quantityInterval;
 	}
 
 	/**
-	 * SafetySheetLink is a URL to the safety datasheet (if any).
+	 * QuantityInterval is the interval in which this product can be ordered. E.g.
+	 * if the quantity interval is 5, the end-user can only order in quantities of
+	 * 5,10,15 etc. 
 	 */
-	public void setSafetySheetLink(String safetySheetLink) {
-		this.safetySheetLink = safetySheetLink;
+	public void setQuantityInterval(Double quantityInterval) {
+		this.quantityInterval = quantityInterval;
+	}
+
+	/**
+	 * QuantityMax is the maximum order quantity for this product.
+	 */
+	public Double getQuantityMax() {
+		return this.quantityMax;
+	}
+
+	/**
+	 * QuantityMax is the maximum order quantity for this product.
+	 */
+	public void setQuantityMax(Double quantityMax) {
+		this.quantityMax = quantityMax;
+	}
+
+	/**
+	 * QuantityMin is the minimum order quantity for this product.
+	 */
+	public Double getQuantityMin() {
+		return this.quantityMin;
+	}
+
+	/**
+	 * QuantityMin is the minimum order quantity for this product.
+	 */
+	public void setQuantityMin(Double quantityMin) {
+		this.quantityMin = quantityMin;
+	}
+
+	/**
+	 * References defines cross-product references, e.g. alternatives or follow-up
+	 * products.
+	 */
+	public Reference[] getReferences() {
+		return this.references;
+	}
+
+	/**
+	 * References defines cross-product references, e.g. alternatives or follow-up
+	 * products.
+	 */
+	public void setReferences(Reference[] references) {
+		this.references = references;
+	}
+
+	/**
+	 * Safetysheet is the name of an safetysheet file (in the media files) or a URL
+	 * to the safetysheet on the internet.
+	 */
+	public String getSafetysheet() {
+		return this.safetysheet;
+	}
+
+	/**
+	 * Safetysheet is the name of an safetysheet file (in the media files) or a URL
+	 * to the safetysheet on the internet.
+	 */
+	public void setSafetysheet(String safetysheet) {
+		this.safetysheet = safetysheet;
+	}
+
+	/**
+	 * SafetysheetURL is the URL to the safety data sheet (if available).
+	 */
+	public String getSafetysheetURL() {
+		return this.safetysheetURL;
+	}
+
+	/**
+	 * SafetysheetURL is the URL to the safety data sheet (if available).
+	 */
+	public void setSafetysheetURL(String safetysheetURL) {
+		this.safetysheetURL = safetysheetURL;
 	}
 
 	/**
@@ -347,6 +981,22 @@ public class Product {
 	}
 
 	/**
+	 * Score represents the relevance of the document if the result is returned from
+	 * a search.
+	 */
+	public double getScore() {
+		return this.score;
+	}
+
+	/**
+	 * Score represents the relevance of the document if the result is returned from
+	 * a search.
+	 */
+	public void setScore(double score) {
+		this.score = score;
+	}
+
+	/**
 	 * URL to this page.
 	 */
 	public String getSelfLink() {
@@ -358,6 +1008,22 @@ public class Product {
 	 */
 	public void setSelfLink(String selfLink) {
 		this.selfLink = selfLink;
+	}
+
+	/**
+	 * Service indicates if the is a good (false) or a service (true). The default
+	 * value is false.
+	 */
+	public Boolean getService() {
+		return this.service;
+	}
+
+	/**
+	 * Service indicates if the is a good (false) or a service (true). The default
+	 * value is false.
+	 */
+	public void setService(Boolean service) {
+		this.service = service;
 	}
 
 	/**
@@ -375,73 +1041,131 @@ public class Product {
 	}
 
 	/**
-	 * ThumbnailLink is a URL to the thumbnail image (if any).
+	 * TaxCode to use for this product. This is typically project-specific.
 	 */
-	public String getThumbnailLink() {
-		return this.thumbnailLink;
+	public String getTaxCode() {
+		return this.taxCode;
 	}
 
 	/**
-	 * ThumbnailLink is a URL to the thumbnail image (if any).
+	 * TaxCode to use for this product. This is typically project-specific.
 	 */
-	public void setThumbnailLink(String thumbnailLink) {
-		this.thumbnailLink = thumbnailLink;
+	public void setTaxCode(String taxCode) {
+		this.taxCode = taxCode;
 	}
 
 	/**
-	 * Name of the product.
+	 * TenantID is the identifier of the tenant.
 	 */
-	public String getTitle() {
-		return this.title;
+	public long getTenantId() {
+		return this.tenantId;
 	}
 
 	/**
-	 * Name of the product.
+	 * TenantID is the identifier of the tenant.
 	 */
-	public void setTitle(String title) {
-		this.title = title;
+	public void setTenantId(long tenantId) {
+		this.tenantId = tenantId;
+	}
+
+	/**
+	 * Thumbnail is the name of an thumbnail image file (in the media files) or a
+	 * URL to the image on the internet.
+	 */
+	public String getThumbnail() {
+		return this.thumbnail;
+	}
+
+	/**
+	 * Thumbnail is the name of an thumbnail image file (in the media files) or a
+	 * URL to the image on the internet.
+	 */
+	public void setThumbnail(String thumbnail) {
+		this.thumbnail = thumbnail;
+	}
+
+	/**
+	 * ThubmnailURL is the URL to the thumbnail image.
+	 */
+	public String getThumbnailURL() {
+		return this.thumbnailURL;
+	}
+
+	/**
+	 * ThubmnailURL is the URL to the thumbnail image.
+	 */
+	public void setThumbnailURL(String thumbnailURL) {
+		this.thumbnailURL = thumbnailURL;
 	}
 
 	/**
 	 * Unspscs is a list of UNSPSC categories the product belongs to.
 	 */
-	public String[] getUnspscs() {
+	public Unspsc[] getUnspscs() {
 		return this.unspscs;
 	}
 
 	/**
 	 * Unspscs is a list of UNSPSC categories the product belongs to.
 	 */
-	public void setUnspscs(String[] unspscs) {
+	public void setUnspscs(Unspsc[] unspscs) {
 		this.unspscs = unspscs;
 	}
 
 	/**
-	 * Vendor is the name of the vendor.
+	 * Updated is the last modification date and time of the product.
 	 */
-	public String getVendor() {
-		return this.vendor;
+	public Date getUpdated() {
+		return this.updated;
 	}
 
 	/**
-	 * Vendor is the name of the vendor.
+	 * Updated is the last modification date and time of the product.
 	 */
-	public void setVendor(String vendor) {
-		this.vendor = vendor;
-	}
-
-	/**
-	 * VendorERPNumber is the number of the vendor in the ERP system.
-	 */
-	public String getVendorErpNumber() {
-		return this.vendorErpNumber;
+	public void setUpdated(Date updated) {
+		this.updated = updated;
 	}
 
 	/**
 	 * VendorERPNumber is the number of the vendor in the ERP system.
 	 */
-	public void setVendorErpNumber(String vendorErpNumber) {
-		this.vendorErpNumber = vendorErpNumber;
+	public String getVendorERPNumber() {
+		return this.vendorERPNumber;
+	}
+
+	/**
+	 * VendorERPNumber is the number of the vendor in the ERP system.
+	 */
+	public void setVendorERPNumber(String vendorERPNumber) {
+		this.vendorERPNumber = vendorERPNumber;
+	}
+
+	/**
+	 * VendorID is the identifier of the vendor.
+	 */
+	public long getVendorId() {
+		return this.vendorId;
+	}
+
+	/**
+	 * VendorID is the identifier of the vendor.
+	 */
+	public void setVendorId(long vendorId) {
+		this.vendorId = vendorId;
+	}
+
+	/**
+	 * VendorName is the name of the vendor.
+	 */
+	public String getVendorName() {
+		return this.vendorName;
+	}
+
+	/**
+	 * VendorName is the name of the vendor.
+	 */
+	public void setVendorName(String vendorName) {
+		this.vendorName = vendorName;
 	}
 }
 

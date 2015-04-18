@@ -27,8 +27,8 @@ import com.google.gson.annotations.SerializedName;
 public class TermBucket {
 	@SerializedName("count")
 	private long count;
-	@SerializedName("value")
-	private String value;
+	@SerializedName("term")
+	private String term;
 
 	/**
 	 * Create new instance of TermBucket.
@@ -37,31 +37,31 @@ public class TermBucket {
 	}
 
 	/**
-	 * Count is the number of items found for this bucket.
+	 * Count is the number of items found in this bucket.
 	 */
 	public long getCount() {
 		return this.count;
 	}
 
 	/**
-	 * Count is the number of items found for this bucket.
+	 * Count is the number of items found in this bucket.
 	 */
 	public void setCount(long count) {
 		this.count = count;
 	}
 
 	/**
-	 * Value is the value of the bucket.
+	 * Term is the key of the bucket.
 	 */
-	public String getValue() {
-		return this.value;
+	public String getTerm() {
+		return this.term;
 	}
 
 	/**
-	 * Value is the value of the bucket.
+	 * Term is the key of the bucket.
 	 */
-	public void setValue(String value) {
-		this.value = value;
+	public void setTerm(String term) {
+		this.term = term;
 	}
 }
 

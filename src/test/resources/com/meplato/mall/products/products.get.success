@@ -1,0 +1,133 @@
+HTTP/1.1 200 OK
+Cache-Control: private, no-cache
+Content-Type: application/json; charset=utf-8
+Last-Modified: Thu, 16 Apr 2015 16:37:32 GMT
+P3p: CP="ALL ADM DEV PSAo COM OUR OTRo IND ONL"
+X-Content-Type-Options: nosniff
+X-Ua-Compatible: IE=edge
+X-Xss-Protection: 1; mode=block
+Date: Thu, 16 Apr 2015 16:37:32 GMT
+Transfer-Encoding: chunked
+
+{
+  "kind": "mall#product,v1",
+  "selfLink": "http://mall.go/api/v1/default/products/982790@6",
+  "id": "982790@6",
+  "tenantId": 1,
+  "vendorId": 6,
+  "vendorName": "Reiff",
+  "mpcc": "reiff",
+  "mpsc": "reiff",
+  "catalogId": 6,
+  "catalogName": "Technische Produkte",
+  "spn": "982790",
+  "name": "Stahlblech Lenkrolle Kunststoffrad LK-PO 125 R-1",
+  "description": "Stahlblech Lenkrolle Kunststoffrad LK-PO 125 R-1",
+  "keywords": [
+    "Rad",
+    "Rolle",
+    "Lenk"
+  ],
+  "eclasses": [
+    {
+      "version": "5.1",
+      "code": "21079101"
+    }
+  ],
+  "currency": "EUR",
+  "priceQty": 1,
+  "ou": "PCE",
+  "cuPerOu": 1,
+  "cu": "PCE",
+  "leadtime": 5,
+  "taxCode": "0.190000",
+  "image": "Web/Detailansicht/342_LK_PO_100G_832670_Zoom_Detailansicht.jpg",
+  "imageUrl": "http://store2.go/reiff/media?file=Web%2FDetailansicht%2F342_LK_PO_100G_832670_Zoom_Detailansicht.jpg\u0026h=230\u0026w=330",
+  "thumbnail": "Web/Bilder Klein/342_LK_PO_100G_832670_Zoom_Detailansicht_Voransicht.jpg",
+  "thumbnailUrl": "http://store2.go/reiff/media?file=Web%2FDetailansicht%2F342_LK_PO_100G_832670_Zoom_Detailansicht.jpg\u0026h=90\u0026w=90",
+  "matgroup": "1",
+  "availability": {},
+  "features": [
+    {
+      "kind": "ECLASS-5.1",
+      "name": "Anwendungsbereich",
+      "values": [
+        "Lenkrolle"
+      ]
+    },
+    {
+      "kind": "ECLASS-5.1",
+      "name": "Material",
+      "values": [
+        "Stahlblech"
+      ]
+    },
+    {
+      "kind": "ECLASS-5.1",
+      "name": "Bestellnr.",
+      "values": [
+        "LK-PO 125R-1"
+      ]
+    },
+    {
+      "kind": "ECLASS-5.1",
+      "name": "Rad Ø",
+      "values": [
+        "125"
+      ],
+      "unit": "mm"
+    },
+    {
+      "kind": "ECLASS-5.1",
+      "name": "Radbreite",
+      "values": [
+        "40"
+      ],
+      "unit": "mm"
+    },
+    {
+      "kind": "ECLASS-5.1",
+      "name": "Tragfähigkeit",
+      "values": [
+        "250"
+      ],
+      "unit": "kg"
+    },
+    {
+      "kind": "ECLASS-5.1",
+      "name": "Gesamthöhe",
+      "values": [
+        "155"
+      ],
+      "unit": "mm"
+    },
+    {
+      "kind": "ECLASS-5.1",
+      "name": "Plattengröße",
+      "values": [
+        "100 x 85"
+      ],
+      "unit": "mm"
+    },
+    {
+      "kind": "ECLASS-5.1",
+      "name": "Schraublochentfernung",
+      "values": [
+        "80 x 60"
+      ],
+      "unit": "mm"
+    },
+    {
+      "kind": "ECLASS-5.1",
+      "name": "Lagerart",
+      "values": [
+        "Rollenlager"
+      ]
+    }
+  ],
+  "created": "2015-04-16T07:16:27Z",
+  "updated": "2015-04-16T07:16:27Z",
+  "extProductId": "982790@6",
+  "vendorErpNumber": "REIFF",
+  "price": 37.57
+}

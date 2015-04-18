@@ -59,14 +59,14 @@ public class ScrollResponse {
 	}
 
 	/**
-	 * Kind is store#products-scroll,v1 for this kind of response.
+	 * Kind is mall#products-scroll,v1 for this kind of response.
 	 */
 	public String getKind() {
 		return this.kind;
 	}
 
 	/**
-	 * Kind is store#products-scroll,v1 for this kind of response.
+	 * Kind is mall#products-scroll,v1 for this kind of response.
 	 */
 	public void setKind(String kind) {
 		this.kind = kind;
