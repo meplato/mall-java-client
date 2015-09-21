@@ -43,7 +43,7 @@ public class Service {
 	/** API version. */
 	public static String VERSION = "1.0.0.beta1";
 	/** User Agent. */
-	public static String USER_AGENT = "meplato-api-java-version/1.0.0";
+	public static String USER_AGENT = "meplato-java-client/2.0";
 	/** Default base URL of the API endpoints. */
 	public static String BASE_URL = "https://mall.meplato.com/api/v1";
 	/** RFC3339 pattern for deserializing date/time from the API. */

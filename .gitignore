@@ -48,6 +48,7 @@ crashlytics-build.properties
 # Gradle
 .gradle/
 /build
+/genapi.bash
 
 # Lib specific
 .DS_Store
