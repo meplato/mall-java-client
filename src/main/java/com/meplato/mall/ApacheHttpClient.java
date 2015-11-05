@@ -48,6 +48,16 @@ public class ApacheHttpClient implements Client {
         httpClient = HttpClients.createDefault();
     }
 
+    /**
+     * Instantiates a new instance of ApacheHttpClient with the given
+     * CloseableHttpClient.
+     *
+     * @param client the closable HTTP client to use
+     */
+    public ApacheHttpClient(CloseableHttpClient client) {
+        httpClient = client;
+    }
+
     public static Gson getSerializer() {
         return new GsonBuilder().setDateFormat(RFC3339).create();
     }
