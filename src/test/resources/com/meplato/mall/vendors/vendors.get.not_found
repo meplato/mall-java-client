@@ -1,0 +1,12 @@
+HTTP/1.1 404 Not Found
+Server: nginx
+Date: Mon, 25 Jan 2016 11:13:54 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 51
+Connection: keep-alive
+P3p: CP="ALL ADM DEV PSAo COM OUR OTRo IND ONL"
+X-Content-Type-Options: nosniff
+X-Ua-Compatible: IE=edge
+X-Xss-Protection: 1; mode=block
+
+{"error":{"code":404,"message":"Vendor not found"}}

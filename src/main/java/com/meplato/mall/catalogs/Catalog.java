@@ -57,6 +57,8 @@ public class Catalog {
 	private String validFrom;
 	@SerializedName("validUntil")
 	private String validUntil;
+	@SerializedName("vendor")
+	private Vendor vendor;
 
 	/**
 	 * Create new instance of Catalog.
@@ -288,6 +290,20 @@ public class Catalog {
 	 */
 	public void setValidUntil(String validUntil) {
 		this.validUntil = validUntil;
+	}
+
+	/**
+	 * Vendor that offers this catalog.
+	 */
+	public Vendor getVendor() {
+		return this.vendor;
+	}
+
+	/**
+	 * Vendor that offers this catalog.
+	 */
+	public void setVendor(Vendor vendor) {
+		this.vendor = vendor;
 	}
 }
 

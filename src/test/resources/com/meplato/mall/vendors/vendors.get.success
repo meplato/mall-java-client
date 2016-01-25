@@ -1,0 +1,27 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 25 Jan 2016 11:11:08 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 317
+Connection: keep-alive
+Cache-Control: private, no-cache
+Last-Modified: Mon, 25 Jan 2016 11:11:08 GMT
+P3p: CP="ALL ADM DEV PSAo COM OUR OTRo IND ONL"
+X-Content-Type-Options: nosniff
+X-Ua-Compatible: IE=edge
+X-Xss-Protection: 1; mode=block
+
+{
+  "kind": "mall#vendor,v1",
+  "selfLink": "http://mall.go/api/v1/vendors/8",
+  "id": 8,
+  "type": "default",
+  "name": "Denios for Demo",
+  "mpcc": "denios",
+  "mpsc": "denios",
+  "erpNumber": "80138:CX12",
+  "duns": "",
+  "language": "de",
+  "created": "2015-12-30T15:52:56Z",
+  "updated": "2015-12-30T15:52:56Z"
+}

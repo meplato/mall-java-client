@@ -24,7 +24,7 @@ import java.io.IOException;
  * Base class for all tests.
  */
 public abstract class BaseTest {
-    private static final String BASE_URL = "http://store2.go/api/v2";
+    protected static final String BASE_URL = "http://mall.go/api/v2";
 
     private MockClient client;
 
@@ -56,6 +56,12 @@ public abstract class BaseTest {
         return service;
     }
 
+    public com.meplato.mall.vendors.Service getVendorsService() {
+        com.meplato.mall.vendors.Service service = new com.meplato.mall.vendors.Service(getClient());
+        service.setBaseURL(BASE_URL);
+        return service;
+    }
+
     protected void mockResponse(Response response) {
         this.getClient().setResponse(response);
     }
@@ -72,10 +78,10 @@ public abstract class BaseTest {
     }
 
     @Before
-    public void beforeTest() throws ServiceException {
+    public void beforeTest() throws ServiceException, Exception {
     }
 
     @After
-    public void afterTest() throws ServiceException {
+    public void afterTest() throws ServiceException, Exception {
     }
 }

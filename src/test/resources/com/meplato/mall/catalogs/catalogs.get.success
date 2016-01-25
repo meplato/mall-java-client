@@ -1,28 +1,44 @@
 HTTP/1.1 200 OK
-Cache-Control: private, no-cache
+Server: nginx
+Date: Mon, 25 Jan 2016 11:10:24 GMT
 Content-Type: application/json; charset=utf-8
-Last-Modified: Thu, 16 Apr 2015 16:07:03 GMT
+Content-Length: 792
+Connection: keep-alive
+Cache-Control: private, no-cache
+Last-Modified: Mon, 25 Jan 2016 11:10:24 GMT
 P3p: CP="ALL ADM DEV PSAo COM OUR OTRo IND ONL"
 X-Content-Type-Options: nosniff
 X-Ua-Compatible: IE=edge
 X-Xss-Protection: 1; mode=block
-Date: Thu, 16 Apr 2015 16:07:03 GMT
-Content-Length: 424
 
 {
   "kind": "mall#catalog,v1",
-  "selfLink": "http://mall.go/api/v1/catalogs/5",
-  "id": 5,
-  "title": "Haus \u0026 Garten",
+  "selfLink": "http://mall.go/api/v1/catalogs/10",
+  "id": 10,
+  "title": "Gefahrstofflagerung (Demo)",
   "language": "de",
   "currency": "EUR",
   "validFrom": "2015-01-01",
   "validUntil": "2016-12-31",
-  "lastSyncAt": "2015-04-16T07:18:19Z",
-  "syncVersion": 2,
-  "skipWorkArea": true,
+  "lastSyncAt": "2015-12-30T15:56:08Z",
+  "syncVersion": 1,
+  "skipWorkArea": false,
   "expired": false,
   "effective": true,
-  "created": "2015-04-16T06:29:56Z",
-  "updated": "2015-04-16T07:18:19Z"
+  "created": "2015-12-30T15:54:36Z",
+  "updated": "2015-12-30T15:56:08Z",
+  "vendor": {
+    "kind": "mall#vendor,v1",
+    "selfLink": "http://mall.go/api/v1/vendors/8",
+    "id": 8,
+    "type": "default",
+    "name": "Denios for Demo",
+    "mpcc": "denios",
+    "mpsc": "denios",
+    "erpNumber": "80138:CX12",
+    "duns": "",
+    "language": "de",
+    "created": "2015-12-30T15:52:56Z",
+    "updated": "2015-12-30T15:52:56Z"
+  }
 }

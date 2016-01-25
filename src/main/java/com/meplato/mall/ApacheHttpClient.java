@@ -37,7 +37,7 @@ public class ApacheHttpClient implements Client {
     private final CloseableHttpClient httpClient;
 
     /** User Agent. */
-    public static String USER_AGENT = "meplato-api-java-version/1.0.0";
+    public static String USER_AGENT = "meplato-api-java-version-apache/1.0.0";
     /** RFC3339 pattern for deserializing date/time from the API. */
     public static String RFC3339 = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSXXX";
 

@@ -11,9 +11,11 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.meplato.mall.catalogs;
+package com.meplato.mall.vendors;
 
 import com.meplato.mall.ServiceException;
+import com.meplato.mall.vendors.*;
+import com.meplato.mall.vendors.Service;
 import org.apache.http.HttpException;
 import org.junit.Test;
 
@@ -22,32 +24,31 @@ import java.io.IOException;
 import static org.junit.Assert.*;
 
 /**
- * Tests getting a catalog.
+ * Tests getting a vendor.
  */
 public class GetTest extends BaseTest {
 
     @Test
-    public void testCatalogGet() throws ServiceException, IOException, HttpException {
-        this.mockResponseFromFile("catalogs.get.success");
+    public void testVendorGet() throws ServiceException, IOException, HttpException {
+        this.mockResponseFromFile("vendors.get.success");
 
-        Service service = getCatalogsService();
+        Service service = getVendorsService();
         assertNotNull(service);
 
-        Catalog catalog = service.get().id(5).execute();
-        assertNotNull(catalog);
-        assertTrue(catalog.getId() > 0);
-        assertNotNull(catalog.getTitle());
-        assertNotEquals("", catalog.getTitle());
-        assertNotNull(catalog.getCreated());
-        assertNotNull(catalog.getUpdated());
-        assertNotNull(catalog.getVendor());
+        Vendor vendor = service.get().id(8).execute();
+        assertNotNull(vendor);
+        assertTrue(vendor.getId() > 0);
+        assertNotNull(vendor.getName());
+        assertNotEquals("", vendor.getName());
+        assertNotNull(vendor.getCreated());
+        assertNotNull(vendor.getUpdated());
     }
 
     @Test
-    public void testCatalogNotFound() throws ServiceException, IOException, HttpException {
-        this.mockResponseFromFile("catalogs.get.not_found");
+    public void testVendorNotFound() throws ServiceException, IOException, HttpException {
+        this.mockResponseFromFile("vendors.get.not_found");
 
-        Service service = getCatalogsService();
+        Service service = getVendorsService();
         assertNotNull(service);
 
         try {
@@ -56,21 +57,21 @@ public class GetTest extends BaseTest {
         } catch (ServiceException ex) {
             assertNotNull(ex);
             assertNotNull(ex.getError());
-            assertEquals("Catalog not found", ex.getMessage());
+            assertEquals("Vendor not found", ex.getMessage());
         }
     }
 
     @Test
-    public void testCatalogsGetUnauthorized() throws ServiceException, IOException, HttpException {
-        this.mockResponseFromFile("catalogs.get.unauthorized");
+    public void testVendorsGetUnauthorized() throws ServiceException, IOException, HttpException {
+        this.mockResponseFromFile("vendors.get.unauthorized");
 
-        Service service = getCatalogsService();
+        Service service = getVendorsService();
         assertNotNull(service);
         service.setUser("");
         service.setPassword("");
 
         try {
-            service.get().id(5).execute();
+            service.get().id(8).execute();
             fail("expected to not get data without authorization");
         } catch (ServiceException ex) {
             assertNotNull(ex);

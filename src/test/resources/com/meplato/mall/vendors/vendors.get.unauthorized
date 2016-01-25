@@ -1,0 +1,13 @@
+HTTP/1.1 401 Unauthorized
+Server: nginx
+Date: Mon, 25 Jan 2016 11:13:35 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 47
+Connection: keep-alive
+P3p: CP="ALL ADM DEV PSAo COM OUR OTRo IND ONL"
+Www-Authenticate: Basic realm="Meplato Mall"
+X-Content-Type-Options: nosniff
+X-Ua-Compatible: IE=edge
+X-Xss-Protection: 1; mode=block
+
+{"error":{"code":401,"message":"Unauthorized"}}
