@@ -13,6 +13,10 @@
  */
 package com.meplato.mall;
 
+import com.meplato.mall.catalogs.CatalogsService;
+import com.meplato.mall.mlt.MLTService;
+import com.meplato.mall.products.ProductsService;
+import com.meplato.mall.vendors.VendorsService;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpException;
 import org.junit.After;
@@ -38,26 +42,26 @@ public abstract class BaseTest {
         return client;
     }
 
-    public com.meplato.mall.catalogs.Service getCatalogsService() {
-        com.meplato.mall.catalogs.Service service = new com.meplato.mall.catalogs.Service(getClient());
+    public CatalogsService getCatalogsService() {
+        CatalogsService service = new CatalogsService(getClient());
         service.setBaseURL(BASE_URL);
         return service;
     }
 
-    public com.meplato.mall.mlt.Service getMoreLikeThisService() {
-        com.meplato.mall.mlt.Service service = new com.meplato.mall.mlt.Service(getClient());
+    public MLTService getMoreLikeThisService() {
+        MLTService service = new MLTService(getClient());
         service.setBaseURL(BASE_URL);
         return service;
     }
 
-    public com.meplato.mall.products.Service getProductsService() {
-        com.meplato.mall.products.Service service = new com.meplato.mall.products.Service(getClient());
+    public ProductsService getProductsService() {
+        ProductsService service = new ProductsService(getClient());
         service.setBaseURL(BASE_URL);
         return service;
     }
 
-    public com.meplato.mall.vendors.Service getVendorsService() {
-        com.meplato.mall.vendors.Service service = new com.meplato.mall.vendors.Service(getClient());
+    public VendorsService getVendorsService() {
+        VendorsService service = new VendorsService(getClient());
         service.setBaseURL(BASE_URL);
         return service;
     }

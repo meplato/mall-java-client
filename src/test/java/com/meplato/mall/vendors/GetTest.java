@@ -14,8 +14,6 @@
 package com.meplato.mall.vendors;
 
 import com.meplato.mall.ServiceException;
-import com.meplato.mall.vendors.*;
-import com.meplato.mall.vendors.Service;
 import org.apache.http.HttpException;
 import org.junit.Test;
 
@@ -32,7 +30,7 @@ public class GetTest extends BaseTest {
     public void testVendorGet() throws ServiceException, IOException, HttpException {
         this.mockResponseFromFile("vendors.get.success");
 
-        Service service = getVendorsService();
+        VendorsService service = getVendorsService();
         assertNotNull(service);
 
         Vendor vendor = service.get().id(8).execute();
@@ -48,7 +46,7 @@ public class GetTest extends BaseTest {
     public void testVendorNotFound() throws ServiceException, IOException, HttpException {
         this.mockResponseFromFile("vendors.get.not_found");
 
-        Service service = getVendorsService();
+        VendorsService service = getVendorsService();
         assertNotNull(service);
 
         try {
@@ -65,7 +63,7 @@ public class GetTest extends BaseTest {
     public void testVendorsGetUnauthorized() throws ServiceException, IOException, HttpException {
         this.mockResponseFromFile("vendors.get.unauthorized");
 
-        Service service = getVendorsService();
+        VendorsService service = getVendorsService();
         assertNotNull(service);
         service.setUser("");
         service.setPassword("");

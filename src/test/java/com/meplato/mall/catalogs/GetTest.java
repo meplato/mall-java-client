@@ -30,7 +30,7 @@ public class GetTest extends BaseTest {
     public void testCatalogGet() throws ServiceException, IOException, HttpException {
         this.mockResponseFromFile("catalogs.get.success");
 
-        Service service = getCatalogsService();
+        CatalogsService service = getCatalogsService();
         assertNotNull(service);
 
         Catalog catalog = service.get().id(5).execute();
@@ -47,7 +47,7 @@ public class GetTest extends BaseTest {
     public void testCatalogNotFound() throws ServiceException, IOException, HttpException {
         this.mockResponseFromFile("catalogs.get.not_found");
 
-        Service service = getCatalogsService();
+        CatalogsService service = getCatalogsService();
         assertNotNull(service);
 
         try {
@@ -64,7 +64,7 @@ public class GetTest extends BaseTest {
     public void testCatalogsGetUnauthorized() throws ServiceException, IOException, HttpException {
         this.mockResponseFromFile("catalogs.get.unauthorized");
 
-        Service service = getCatalogsService();
+        CatalogsService service = getCatalogsService();
         assertNotNull(service);
         service.setUser("");
         service.setPassword("");

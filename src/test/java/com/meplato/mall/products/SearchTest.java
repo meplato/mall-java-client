@@ -30,7 +30,7 @@ public class SearchTest extends BaseTest {
     public void testProductsSearch() throws ServiceException, IOException, HttpException {
         this.mockResponseFromFile("products.search.success");
 
-        Service service = getProductsService();
+        ProductsService service = getProductsService();
         assertNotNull(service);
 
         SearchResponse response = service.search().view("default").q("Toner").skip(0).take(10).execute();
@@ -53,7 +53,7 @@ public class SearchTest extends BaseTest {
     public void testProductsSearchUnauthorized() throws ServiceException, IOException, HttpException {
         this.mockResponseFromFile("products.search.unauthorized");
 
-        Service service = getProductsService();
+        ProductsService service = getProductsService();
         assertNotNull(service);
         service.setUser("");
         service.setPassword("");

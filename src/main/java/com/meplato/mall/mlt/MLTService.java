@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015 Meplato GmbH, Switzerland.
+ * Copyright (c) 2015-2016 Meplato GmbH, Switzerland.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
@@ -34,10 +34,10 @@ import org.apache.commons.codec.binary.Base64;
 import com.meplato.mall.*;
 
 /**
- * Service is the entry point of the Meplato Mall API.
+ * MLTService is the entry point of the Meplato Mall API.
  */
 
-public class Service {
+public class MLTService {
 	/** API title. */
 	public static String TITLE = "Meplato Mall API";
 	/** API version. */
@@ -59,11 +59,11 @@ public class Service {
 	private String password;
 
 	/**
-	 * Instantiate a new Service.
+	 * Instantiate a new MLTService.
 	 *
 	 * @param client the {@link Client} to use for requests.
 	 */
-	public Service(Client client) {
+	public MLTService(Client client) {
 		this.client = client;
 		this.baseURL = BASE_URL;
 	}
@@ -176,7 +176,7 @@ public class Service {
 	 * Find similar products. 
 	 */
 	public static class MoreLikeThisService {
-		private final Service service;
+		private final MLTService service;
 		private final Map<String, Object> params = new HashMap<String, Object>();
 		private final Map<String, String> headers = new HashMap<String, String>();
 		private String view;
@@ -184,7 +184,7 @@ public class Service {
 		/**
 		 * Creates a new instance of MoreLikeThisService.
 		 */
-		public MoreLikeThisService(Service service) {
+		public MoreLikeThisService(MLTService service) {
 			this.service = service;
 		}
 

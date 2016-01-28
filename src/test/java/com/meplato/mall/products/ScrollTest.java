@@ -28,7 +28,7 @@ import static org.junit.Assert.assertNotNull;
 public class ScrollTest extends BaseTest {
     @Test
     public void testProductsScroll() throws ServiceException, IOException, HttpException {
-        Service service = getProductsService();
+        ProductsService service = getProductsService();
         assertNotNull(service);
 
         String pageToken = null;

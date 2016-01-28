@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015 Meplato GmbH, Switzerland.
+ * Copyright (c) 2015-2016 Meplato GmbH, Switzerland.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
@@ -34,10 +34,10 @@ import org.apache.commons.codec.binary.Base64;
 import com.meplato.mall.*;
 
 /**
- * Service is the entry point of the Meplato Mall API.
+ * CatalogsService is the entry point of the Meplato Mall API.
  */
 
-public class Service {
+public class CatalogsService {
 	/** API title. */
 	public static String TITLE = "Meplato Mall API";
 	/** API version. */
@@ -59,11 +59,11 @@ public class Service {
 	private String password;
 
 	/**
-	 * Instantiate a new Service.
+	 * Instantiate a new CatalogsService.
 	 *
 	 * @param client the {@link Client} to use for requests.
 	 */
-	public Service(Client client) {
+	public CatalogsService(Client client) {
 		this.client = client;
 		this.baseURL = BASE_URL;
 	}
@@ -185,7 +185,7 @@ public class Service {
 	 * Get returns a single catalog.
 	 */
 	public static class GetService {
-		private final Service service;
+		private final CatalogsService service;
 		private final Map<String, Object> params = new HashMap<String, Object>();
 		private final Map<String, String> headers = new HashMap<String, String>();
 		private long id;
@@ -193,7 +193,7 @@ public class Service {
 		/**
 		 * Creates a new instance of GetService.
 		 */
-		public GetService(Service service) {
+		public GetService(CatalogsService service) {
 			this.service = service;
 		}
 
@@ -237,14 +237,14 @@ public class Service {
 	 * Search for catalogs. 
 	 */
 	public static class SearchService {
-		private final Service service;
+		private final CatalogsService service;
 		private final Map<String, Object> params = new HashMap<String, Object>();
 		private final Map<String, String> headers = new HashMap<String, String>();
 
 		/**
 		 * Creates a new instance of SearchService.
 		 */
-		public SearchService(Service service) {
+		public SearchService(CatalogsService service) {
 			this.service = service;
 		}
 

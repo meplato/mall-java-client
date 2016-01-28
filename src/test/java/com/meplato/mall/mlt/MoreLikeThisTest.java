@@ -30,7 +30,7 @@ public class MoreLikeThisTest extends BaseTest {
     public void testMoreLikeThisSuccess() throws ServiceException, IOException, HttpException {
         this.mockResponseFromFile("mlt.success");
 
-        Service service = getMoreLikeThisService();
+        MLTService service = getMoreLikeThisService();
         assertNotNull(service);
 
         MoreLikeThisResponse response = service.moreLikeThis().view("default").q("Toner").skip(0).take(10).execute();
@@ -53,7 +53,7 @@ public class MoreLikeThisTest extends BaseTest {
     public void testMoreLikeThisUnauthorized() throws ServiceException, IOException, HttpException {
         this.mockResponseFromFile("mlt.unauthorized");
 
-        Service service = getMoreLikeThisService();
+        MLTService service = getMoreLikeThisService();
         assertNotNull(service);
         service.setUser("");
         service.setPassword("");
