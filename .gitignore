@@ -50,6 +50,17 @@ crashlytics-build.properties
 /build
 /genapi.bash
 
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
 # Lib specific
 .DS_Store
 *.log
