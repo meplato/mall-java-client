@@ -16,7 +16,7 @@ package com.meplato.mall;
 /**
  * ServiceException thrown while communicating with a service.
  */
-public class ServiceException extends Throwable {
+public class ServiceException extends Exception {
     /**
      * Encapsulated error object.
      */
