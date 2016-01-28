@@ -18,13 +18,13 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.entity.EntityBuilder;
 import org.apache.http.client.methods.*;
-import org.apache.http.entity.StringEntity;
+import org.apache.http.entity.ContentType;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.Map;
 
 /**
@@ -83,8 +83,12 @@ public class ApacheHttpClient implements Client {
         if (body != null) {
             Gson gson = getSerializer();
             try {
-                requestEntity = new StringEntity(gson.toJson(body));
-            } catch (UnsupportedEncodingException e) {
+                requestEntity = EntityBuilder.create().
+                        setText(gson.toJson(body)).
+                        setContentEncoding("UTF-8").
+                        setContentType(ContentType.APPLICATION_JSON).
+                        build();
+            } catch (Exception e) {
                 throw new ServiceException("Error serializing body", null, e);
             }
         }
@@ -127,7 +131,7 @@ public class ApacheHttpClient implements Client {
         }
         httpRequest.setHeader("Accept", "application/json");
         httpRequest.setHeader("Accept-Charset", "utf-8");
-        httpRequest.setHeader("Content-Type", "application/json");
+        httpRequest.setHeader("Content-Type", "application/json; charset=utf-8");
         httpRequest.setHeader("User-Agent", USER_AGENT);
 
         try (CloseableHttpResponse httpResponse = httpClient.execute(httpRequest)) {
