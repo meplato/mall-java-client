@@ -71,7 +71,7 @@ public class JettyHttpResponse implements Response {
     @Override
     public <T> T getBodyJSON(Class<T> clazz) {
         if (this.body != null) {
-            Gson gson = ApacheHttpClient.getSerializer();
+            Gson gson = JettyHttpClient.getSerializer();
             return gson.fromJson(this.body, clazz);
         } else {
             return null;
