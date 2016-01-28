@@ -112,7 +112,7 @@ public class JettyHttpClient implements Client {
         }
         request = request.header("Accept", "application/json");
         request = request.header("Accept-Charset", "utf-8");
-        request = request.header("Content-Type", "application/json");
+        request = request.header("Content-Type", "application/json; charset=utf-8");
 
         try {
             ContentResponse httpResponse = request.send();
