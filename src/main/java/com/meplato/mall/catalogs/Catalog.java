@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015 Meplato GmbH, Switzerland.
+ * Copyright (c) 2015-2016 Meplato GmbH, Switzerland.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
@@ -31,6 +31,8 @@ public class Catalog {
 	private Date created;
 	@SerializedName("currency")
 	private String currency;
+	@SerializedName("hubUrl")
+	private String hubUrl;
 	@SerializedName("id")
 	private long id;
 	@SerializedName("isEffective")
@@ -43,6 +45,8 @@ public class Catalog {
 	private String language;
 	@SerializedName("lastSyncAt")
 	private Date lastSyncAt;
+	@SerializedName("ociUrl")
+	private String ociUrl;
 	@SerializedName("selfLink")
 	private String selfLink;
 	@SerializedName("skipWorkArea")
@@ -106,6 +110,20 @@ public class Catalog {
 	 */
 	public void setCurrency(String currency) {
 		this.currency = currency;
+	}
+
+	/**
+	 * HubURL represents the Meplato Hub endpoint for this catalog.
+	 */
+	public String getHubUrl() {
+		return this.hubUrl;
+	}
+
+	/**
+	 * HubURL represents the Meplato Hub endpoint for this catalog.
+	 */
+	public void setHubUrl(String hubUrl) {
+		this.hubUrl = hubUrl;
 	}
 
 	/**
@@ -190,6 +208,22 @@ public class Catalog {
 	 */
 	public void setLastSyncAt(Date lastSyncAt) {
 		this.lastSyncAt = lastSyncAt;
+	}
+
+	/**
+	 * OciURL represents the OCI endpoint the supplier specified for this catalog,
+	 * including all mandatory parameters in the query string.
+	 */
+	public String getOciUrl() {
+		return this.ociUrl;
+	}
+
+	/**
+	 * OciURL represents the OCI endpoint the supplier specified for this catalog,
+	 * including all mandatory parameters in the query string.
+	 */
+	public void setOciUrl(String ociUrl) {
+		this.ociUrl = ociUrl;
 	}
 
 	/**
