@@ -45,8 +45,14 @@ public class Catalog {
 	private String language;
 	@SerializedName("lastSyncAt")
 	private Date lastSyncAt;
+	@SerializedName("lockedForDownload")
+	private boolean lockedForDownload;
 	@SerializedName("ociUrl")
 	private String ociUrl;
+	@SerializedName("sageContract")
+	private String sageContract;
+	@SerializedName("sageNumber")
+	private String sageNumber;
 	@SerializedName("selfLink")
 	private String selfLink;
 	@SerializedName("skipWorkArea")
@@ -211,6 +217,20 @@ public class Catalog {
 	}
 
 	/**
+	 * LockedForDownload indicates whether a catalog is available for download.
+	 */
+	public boolean isLockedForDownload() {
+		return this.lockedForDownload;
+	}
+
+	/**
+	 * LockedForDownload indicates whether a catalog is available for download.
+	 */
+	public void setLockedForDownload(boolean lockedForDownload) {
+		this.lockedForDownload = lockedForDownload;
+	}
+
+	/**
 	 * OciURL represents the OCI endpoint the supplier specified for this catalog,
 	 * including all mandatory parameters in the query string.
 	 */
@@ -224,6 +244,36 @@ public class Catalog {
 	 */
 	public void setOciUrl(String ociUrl) {
 		this.ociUrl = ociUrl;
+	}
+
+	/**
+	 * SageContract represents the Meplato-internal contract number for the catalog.
+	 */
+	public String getSageContract() {
+		return this.sageContract;
+	}
+
+	/**
+	 * SageContract represents the Meplato-internal contract number for the catalog.
+	 */
+	public void setSageContract(String sageContract) {
+		this.sageContract = sageContract;
+	}
+
+	/**
+	 * SageNumber represents the Meplato-internal number for the vendor of the
+	 * catalog.
+	 */
+	public String getSageNumber() {
+		return this.sageNumber;
+	}
+
+	/**
+	 * SageNumber represents the Meplato-internal number for the vendor of the
+	 * catalog.
+	 */
+	public void setSageNumber(String sageNumber) {
+		this.sageNumber = sageNumber;
 	}
 
 	/**
