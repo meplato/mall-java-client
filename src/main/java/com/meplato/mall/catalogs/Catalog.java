@@ -57,6 +57,8 @@ public class Catalog {
 	private String selfLink;
 	@SerializedName("skipWorkArea")
 	private boolean skipWorkArea;
+	@SerializedName("storePin")
+	private String storePin;
 	@SerializedName("supportsOciBackgroundsearch")
 	private boolean supportsOciBackgroundsearch;
 	@SerializedName("supportsOciDetail")
@@ -318,6 +320,20 @@ public class Catalog {
 	 */
 	public void setSkipWorkArea(boolean skipWorkArea) {
 		this.skipWorkArea = skipWorkArea;
+	}
+
+	/**
+	 * StorePin is the unique PIN of the catalog.
+	 */
+	public String getStorePin() {
+		return this.storePin;
+	}
+
+	/**
+	 * StorePin is the unique PIN of the catalog.
+	 */
+	public void setStorePin(String storePin) {
+		this.storePin = storePin;
 	}
 
 	/**
