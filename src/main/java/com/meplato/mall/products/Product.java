@@ -25,6 +25,8 @@ import com.google.gson.annotations.SerializedName;
  * Product is a good or service in a catalog.
  */
 public class Product {
+	@SerializedName("asin")
+	private String asin;
 	@SerializedName("availability")
 	private Availability availability;
 	@SerializedName("blobs")
@@ -113,6 +115,10 @@ public class Product {
 	private String mpn;
 	@SerializedName("mpsc")
 	private String mPSC;
+	@SerializedName("multiSupplierId")
+	private String multiSupplierId;
+	@SerializedName("multiSupplierName")
+	private String multiSupplierName;
 	@SerializedName("name")
 	private String name;
 	@SerializedName("ou")
@@ -145,6 +151,8 @@ public class Product {
 	private String spn;
 	@SerializedName("taxCode")
 	private String taxCode;
+	@SerializedName("taxRate")
+	private double taxRate;
 	@SerializedName("tenantId")
 	private long tenantId;
 	@SerializedName("thumbnail")
@@ -166,6 +174,20 @@ public class Product {
 	 * Create new instance of Product.
 	 */
 	public Product() {
+	}
+
+	/**
+	 * ASIN is the unique Amazon article number of the product.
+	 */
+	public String getAsin() {
+		return this.asin;
+	}
+
+	/**
+	 * ASIN is the unique Amazon article number of the product.
+	 */
+	public void setAsin(String asin) {
+		this.asin = asin;
 	}
 
 	/**
@@ -813,6 +835,38 @@ public class Product {
 	}
 
 	/**
+	 * MultiSupplierID represents an optional field for the unique identifier of a
+	 * supplier in a multi-supplier catalog.
+	 */
+	public String getMultiSupplierId() {
+		return this.multiSupplierId;
+	}
+
+	/**
+	 * MultiSupplierID represents an optional field for the unique identifier of a
+	 * supplier in a multi-supplier catalog.
+	 */
+	public void setMultiSupplierId(String multiSupplierId) {
+		this.multiSupplierId = multiSupplierId;
+	}
+
+	/**
+	 * MultiSupplierName represents an optional field for the name of the supplier
+	 * in a multi-supplier catalog.
+	 */
+	public String getMultiSupplierName() {
+		return this.multiSupplierName;
+	}
+
+	/**
+	 * MultiSupplierName represents an optional field for the name of the supplier
+	 * in a multi-supplier catalog.
+	 */
+	public void setMultiSupplierName(String multiSupplierName) {
+		this.multiSupplierName = multiSupplierName;
+	}
+
+	/**
 	 * Name of the product.
 	 */
 	public String getName() {
@@ -1052,6 +1106,20 @@ public class Product {
 	 */
 	public void setTaxCode(String taxCode) {
 		this.taxCode = taxCode;
+	}
+
+	/**
+	 * TaxRate for this product, a numeric value between 0.0 and 1.0.
+	 */
+	public double getTaxRate() {
+		return this.taxRate;
+	}
+
+	/**
+	 * TaxRate for this product, a numeric value between 0.0 and 1.0.
+	 */
+	public void setTaxRate(double taxRate) {
+		this.taxRate = taxRate;
 	}
 
 	/**
