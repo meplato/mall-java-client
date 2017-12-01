@@ -13,6 +13,8 @@
  */
 package com.meplato.mall;
 
+import com.google.gson.JsonSyntaxException;
+
 /**
  * ServiceException thrown while communicating with a service.
  */
@@ -55,13 +57,21 @@ public class ServiceException extends Exception {
             return new ServiceException("Request failed", null, null);
         }
 
-        Error error = response.getBodyJSON(Error.class);
-        if (error == null) {
-            return new ServiceException("Request failed", null, null);
+        try {
+            Error error = response.getBodyJSON(Error.class);
+            if (error == null) {
+                return new ServiceException("Request failed", null, null);
+            }
+            if (error.getError() == null) {
+                return new ServiceException("Request failed", error, null);
+            }
+            return new ServiceException(error.getError().getMessage(), error, null);
+        } catch (JsonSyntaxException e) {
+            // We could not parse the response as JSON
+            if (response.getStatusCode() > 0) {
+                return new ServiceException(String.format("Request failed with status code %d", response.getStatusCode()), null, e);
+            }
+            return new ServiceException("Request failed", null, e);
         }
-        if (error.getError() == null) {
-            return new ServiceException("Request failed", error, null);
-        }
-        return new ServiceException(error.getError().getMessage(), error, null);
     }
 }
