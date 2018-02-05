@@ -15,10 +15,10 @@
 /**
  * Package catalogs implements the Meplato Mall API.
  * 
- * @copyright 2014-2017 Meplato GmbH, Switzerland.
+ * @copyright 2014-2018 Meplato GmbH, Switzerland.
  * @author Meplato API Team <support@meplato.com>
- * @version 1.0.6
- * @license Copyright (c) 2015-2017 Meplato GmbH, Switzerland. All rights reserved.
+ * @version 1.0.7
+ * @license Copyright (c) 2015-present Meplato GmbH, Switzerland. All rights reserved.
  * @see <a href="https://developer.meplato.com/mall/#terms">Terms of Service</a>
  * @see <a href="https://developer.meplato.com/mall/">External documentation</a>
  */
@@ -41,7 +41,7 @@ public class Service {
 	/** API title. */
 	public static String TITLE = "Meplato Mall API";
 	/** API version. */
-	public static String VERSION = "1.0.6";
+	public static String VERSION = "1.0.7";
 	/** User Agent. */
 	public static String USER_AGENT = "meplato-java-client/2.0";
 	/** Default base URL of the API endpoints. */
