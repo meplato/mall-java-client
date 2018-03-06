@@ -93,6 +93,8 @@ public class Product {
 	private String image;
 	@SerializedName("imageURL")
 	private String imageURL;
+	@SerializedName("intrastat")
+	private Intrastat intrastat;
 	@SerializedName("keywords")
 	private String[] keywords;
 	@SerializedName("kind")
@@ -678,6 +680,20 @@ public class Product {
 	 */
 	public void setImageURL(String imageURL) {
 		this.imageURL = imageURL;
+	}
+
+	/**
+	 * Intrastat specifies required data for Intrastat messages. 
+	 */
+	public Intrastat getIntrastat() {
+		return this.intrastat;
+	}
+
+	/**
+	 * Intrastat specifies required data for Intrastat messages. 
+	 */
+	public void setIntrastat(Intrastat intrastat) {
+		this.intrastat = intrastat;
 	}
 
 	/**

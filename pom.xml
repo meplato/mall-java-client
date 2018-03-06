@@ -8,7 +8,7 @@
 
 	<groupId>com.meplato</groupId>
 	<artifactId>meplato-mall</artifactId>
-	<version>1.0.7</version>
+	<version>1.0.8</version>
 	<packaging>jar</packaging>
 
 	<name>Meplato Mall 1.0 API</name>
