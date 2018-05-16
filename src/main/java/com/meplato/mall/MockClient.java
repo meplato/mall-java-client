@@ -24,7 +24,7 @@ public class MockClient implements Client {
 
     /**
      * Sets the response to return from execute.
-     * <p/>
+     * 
      * Notice that if you set the exception, the exception has precedence.
      * In other words: An exception is raised and the response is swallowed.
      *
