@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015-2016 Meplato GmbH, Switzerland.
+ * Copyright (c) 2013-present Meplato GmbH.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
@@ -15,10 +15,10 @@
 /**
  * Package vendors implements the Meplato Mall API.
  * 
- * @copyright 2014-2018 Meplato GmbH, Switzerland.
+ * @copyright 2013-2019 Meplato GmbH.
  * @author Meplato API Team <support@meplato.com>
- * @version 1.0.8
- * @license Copyright (c) 2015-present Meplato GmbH, Switzerland. All rights reserved.
+ * @version 1.0.9
+ * @license Copyright (c) 2015-present Meplato GmbH. All rights reserved.
  * @see <a href="https://developer.meplato.com/mall/#terms">Terms of Service</a>
  * @see <a href="https://developer.meplato.com/mall/">External documentation</a>
  */
@@ -41,7 +41,7 @@ public class Service {
 	/** API title. */
 	public static String TITLE = "Meplato Mall API";
 	/** API version. */
-	public static String VERSION = "1.0.8";
+	public static String VERSION = "1.0.9";
 	/** User Agent. */
 	public static String USER_AGENT = "meplato-java-client/2.0";
 	/** Default base URL of the API endpoints. */

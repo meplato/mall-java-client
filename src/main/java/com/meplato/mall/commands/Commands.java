@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 Meplato GmbH.
+ * Copyright (c) 2015-2019 Meplato GmbH.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
@@ -117,7 +117,7 @@ public class Commands {
                 System.out.printf("  Currency       : %s\n", catalog.getCurrency());
                 System.out.printf("  Valid from     : %s\n", catalog.getValidFrom());
                 System.out.printf("  Valid until    : %s\n", catalog.getValidUntil());
-                // System.out.printf("  Expired        : %d\n", catalog.getExpired());
+                System.out.printf("  Expired        : %d\n", catalog.getExpired());
                 if (catalog.getCatalogManaged() != null) {
                     System.out.printf("  Catalog managed: %b\n", catalog.getCatalogManaged());
                 }

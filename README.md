@@ -16,12 +16,7 @@ find it in the personalization section when logged into Meplato Mall.
 
 ## Installation
 
-First install [gradle](https://gradle.org/), then run e.g. `gradle jar`
-to build up the Java Archive to use.
-
-If you need an IntelliJ IDEA project, run `gradle idea`.
-
-Run `gradle tasks` to get a list of available tasks you can perform.
+Run e.g. `mvn compile` and/or `mvn package` to build the Java Archive to use.
 
 ## Getting started
 
@@ -72,7 +67,7 @@ Run `gradle test` to run tests. All tests are mocked: No internet access necessa
 
 This software is licensed under the Apache 2 license.
 
-    Copyright (c) 2015 Meplato GmbH, Switzerland <http://www.meplato.com>
+    Copyright (c) 2015 Meplato GmbH <http://www.meplato.com>
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
