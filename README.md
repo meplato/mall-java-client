@@ -1,22 +1,26 @@
-# Meplato Mall API for Java
+# Meplato Mall 1.0 API for Java
 
-This is the Java client for the Meplato Mall API. It helps you write
+This is the Java client for the Meplato Mall 1.0 API. It helps you write
 software to integrate into the Meplato suite for buyers.
+
+If you're looking for the Meplato Mall 2.0 API client for Java,
+[please look here](https://github.com/meplato/mall-api-java).
 
 ## Prerequisites
 
-You need at two things to use the Meplato Mall API.
+You need at two things to use the Meplato Mall 1.0 API.
 
-1. A login to Meplato Mall.
+1. A login to Meplato Mall 1.0.
 2. An API token.
 
 Get your login by contacting Meplato Supplier Network Services. The API token
-is required to securely communicate with the Meplato Mall API. You can
-find it in the personalization section when logged into Meplato Mall.
+is required to securely communicate with the Meplato Mall 1.0 API. You can
+find it in the personalization section when logged into Meplato Mall 1.0.
 
 ## Installation
 
 Run e.g. `mvn compile` and/or `mvn package` to build the Java Archive to use.
+Run `mvn test` to run the test suite.
 
 ## Getting started
 
@@ -56,12 +60,12 @@ Feel free to look at the unit tests to get further information how to use the se
 
 ## Documentation
 
-Complete documentation for the Meplato Mall API can be found at
+Complete documentation for the Meplato Mall 1.0 API can be found at
 [https://developer.meplato.com/mall](https://developer.meplato.com/mall).
 
 ## Testing
 
-Run `gradle test` to run tests. All tests are mocked: No internet access necessary.
+Run `mvn test` to run tests. All tests are mocked: No internet access necessary.
 
 # License
 
