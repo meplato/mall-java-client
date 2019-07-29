@@ -17,7 +17,7 @@
  * 
  * @copyright 2013-2019 Meplato GmbH.
  * @author Meplato API Team <support@meplato.com>
- * @version 1.0.9
+ * @version 1.0.10
  * @license Copyright (c) 2015-present Meplato GmbH. All rights reserved.
  * @see <a href="https://developer.meplato.com/mall/#terms">Terms of Service</a>
  * @see <a href="https://developer.meplato.com/mall/">External documentation</a>
@@ -41,7 +41,7 @@ public class Service {
 	/** API title. */
 	public static String TITLE = "Meplato Mall API";
 	/** API version. */
-	public static String VERSION = "1.0.9";
+	public static String VERSION = "1.0.10";
 	/** User Agent. */
 	public static String USER_AGENT = "meplato-java-client/2.0";
 	/** Default base URL of the API endpoints. */
@@ -253,7 +253,10 @@ public class Service {
 	}
 
 	/**
-	 * Scroll is an efficient way to iterate through all products of a catalog. 
+	 * Scroll is an efficient way to iterate through all products of a catalog.
+	 * Notice that certain parameters are only available in version 2 of the scroll
+	 * API (e.g. the size parameter). Using the version parameter is experimental;
+	 * it is best to keep the version selection up to the server. 
 	 */
 	public static class ScrollService {
 		private final Service service;
@@ -293,6 +296,22 @@ public class Service {
 		}
 
 		/**
+		 * Size represents the number of documents to be returned.
+		 */
+		public ScrollService size(int size) {
+			this.params.put("size", size);
+			return this;
+		}
+
+		/**
+		 * Version of the Scroll API.
+		 */
+		public ScrollService version(int version) {
+			this.params.put("version", version);
+			return this;
+		}
+
+		/**
 		 * Execute the operation.
 		 */
 		public ScrollResponse execute() throws ServiceException {
@@ -310,7 +329,7 @@ public class Service {
 				headers.put("Authorization", authorization);
 			}
 
-			String uriTemplate = service.getBaseURL() + "/catalogs/{catalogId}/products/scroll{?pageToken,pretty}";
+			String uriTemplate = service.getBaseURL() + "/catalogs/{catalogId}/products/scroll{?pageToken,pretty,version,size}";
 			Response response = service.getClient().execute("GET", uriTemplate, params, headers, null);
 			if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
 				return response.getBodyJSON(ScrollResponse.class);
@@ -403,9 +422,9 @@ public class Service {
 		}
 
 		/**
-		 * Instructs the API to return price range facets.
+		 * Unspscs limits results to the given UNSPSC codes.
 		 */
-		public SearchService unspscs(boolean unspscs) {
+		public SearchService unspscs(String unspscs) {
 			this.params.put("unspscs", unspscs);
 			return this;
 		}
